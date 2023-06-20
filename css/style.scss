@@ -1,0 +1,294 @@
+// Variables
+:root{
+    --firstColor:#000000;
+    --secondColor:#fff;
+    --thirdColor: #2c8ec7;
+    --fourthColor:##000000e6;
+}
+
+// Reset
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--firstColor);
+}
+a,
+i,
+img{
+    display: block;
+}
+.center{
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Header
+header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+    nav{
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0.5rem 0;
+        margin-top: 2rem;
+        border-radius: 10rem;
+        background-color: var(--fourthColor);
+        backdrop-filter: blur(0.5rem);
+        box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
+        .menu{
+            display: none;
+        }
+        .logo{
+            margin: 0 1rem;
+        }
+        a{
+            color: var(--secondColor);
+            font-size: 2rem;
+            font-family: aladin,sans-serif;
+            transition: .5s all;
+            &:hover{
+                transform: scale(1.2);
+            }
+            span{
+                color: var(--thirdColor) ;
+            }
+        }
+    
+        i{
+            color: var(--secondColor);
+            font-size: 2rem;
+            opacity: 0.6;
+        }
+        ul{
+            font-size: 0;
+            display: flex;
+            gap: 2rem;
+            li{
+                a{
+                    font-size: 1.5rem;
+                    &:hover{
+                        color: var(--thirdColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main - Index page
+main.index{
+    section{
+        margin-top: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        color: var(--secondColor);
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 45%;
+            text-align: center;
+            h2{
+            font-size:  2rem
+            }
+            a{
+                color: var(--secondColor);
+                background-color: var(--thirdColor);
+                width: max-content;
+                margin: 0 auto;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                transition: .5s all;
+                justify-self: center;
+                animation: neon 3s infinite linear;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .image{
+            width: 40%;
+            img{
+                animation: plane 5s infinite linear;
+                width: 100%;
+                filter: drop-shadow(0 0 0.5rem var(--secondColor));
+            }
+        }
+    }
+    section.reverse{
+        flex-direction: row-reverse;
+    }
+}
+// Main - Prestations page
+
+//  Main - Portfolio page
+
+//  Main - Contact
+
+// Footer
+footer{
+    margin-top: 8%;
+    color: var(--secondColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    nav{
+        display: flex;
+        width: 50%;
+        justify-content: space-around;
+        margin: 0 auto;
+        border-radius: 10rem;
+        background-color: var(--fourthColor);
+        box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
+        padding: 0.5rem 0;
+        margin-bottom: 2rem;
+        a{
+            filter: drop-shadow(0 0 0.5rem var(--secondColor));
+            animation: neon-2 4s infinite linear;
+            &:hover{
+                animation:none;
+            }
+        }
+    }
+}
+
+// Keyframes
+@keyframes plane {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2rem);
+    }
+    100%{
+        transform: translateY(0);
+    }   
+}
+@keyframes neon {
+    0%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 0 0.8rem 0 var(--secondColor);
+    }
+    100%{
+        box-shadow: none;
+    }
+}
+@keyframes neon-2 {
+    0%{
+        filter: drop-shadow(0 0 0 0rem);
+    }
+    50%{
+        filter: drop-shadow(0 0 0 0 var(--secondColor)); 
+    }
+    100%{
+        filter: drop-shadow(0 0 0 0rem);
+        }
+}
+
+// Media queries
+@media screen and (max-width:940px) {
+    // Header
+    header{
+            nav{
+                min-width: 10rem;
+                a{
+                    font-size: 1.2rem;
+                }
+                ul{
+                    position: absolute;
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    transform: translateY(-10rem);
+                    transition: 1s all;
+                    width: max-content;
+                    border-radius: 1rem;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    border: 1px solid var(--thirdColor);
+                    background-color: #000000e6;
+                    backdrop-filter: blur(0.5rem);
+                    box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
+                    li{
+                        a{
+                            color: var(--thirdColor);
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+                .menu{
+                    display: block;
+                    p{
+                        color:var(--secondColor);
+                        font-family: aladin,sans-serif;
+                        font-size: 1.1rem;
+                        cursor: pointer;
+                        transition: .5s all;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+            .active{
+                .menu {
+                    p{
+                        color: var(--thirdColor);
+                    }
+                }
+                ul{
+                    transform: translateY(7.5rem);
+                }
+            }
+        }
+        // Main
+        main.index{
+            section, section.reverse{
+                flex-direction: column-reverse;
+                margin-top: 20%;
+                .text{
+                    width: 80%;
+                    h2{
+                        font-size: 1.5rem;
+                        text-align: center;
+                    }
+                    a{
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+        // Footer
+        footer{
+            min-width: 10rem;
+            a{
+                img{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+}
