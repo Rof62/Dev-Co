@@ -139,6 +139,44 @@ main.index{
 }
 // Main - Prestations page
 
+
+.prestations {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    section {
+        color: var(--secondColor);
+        /*margin: 20%;*/
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h2 {
+            font-size: 2rem;       
+        }
+        a {
+            text-transform: uppercase;
+            color: var(--secondColor);
+            background-color: var(--thirdColor);
+            width: max-content;
+            margin: 0 auto;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            transition: .5s all;
+            justify-self: center;
+            animation: neon 3s infinite linear;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        
+    }
+}
+    
+
 //  Main - Portfolio page
 
 //  Main - Contact
@@ -279,6 +317,14 @@ footer{
                         font-size: 0.8rem;
                     }
                 }
+            }
+        }
+        main.prestations {
+            h2 {
+                font-size: 1.5rem;
+            }
+            a {
+                font-size: 0.8rem;
             }
         }
         // Footer
