@@ -147,7 +147,6 @@ main.index{
     gap: 4rem;
     section {
         color: var(--secondColor);
-        /*margin: 20%;*/
         width: 80%;
         margin: 0 auto;
         text-align: center;
@@ -178,8 +177,255 @@ main.index{
     
 
 //  Main - Portfolio page
+main.portfolio{
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15%;
+        .textAndCarousel{
+            display: flex;
+            gap: 5%;
+            align-items: center;
+            .text{
+                width: 50%;
+                text-align: center; 
+                align-items: center;
+                h2, p{
+                    color: var(--secondColor);
+                }
+                h2{
+                font-size: 40px;
+                }
+                p{
+                font-size: 19px;
+                margin-top: 5%;
+                }
+                .technologie{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 5%;
+                }
+                .iconify{
+                margin-top: 5%;
+                font-size: 50px;  
+                }
+            } 
+        }
+        a{
+            margin-top: 2%;
+        }
+// Carousel 
+// Variable
+$n: 8;
+$item-width: 400px;
+$item-separation: 80px;
+$viewer-distance: 500px;
+$theta: 2 * 3.141592653589793 / $n; 
+$apothem: 482.842712474619px;
+
+.carousel {
+	padding: 20px;
+	perspective: $viewer-distance;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	> * {
+		flex: 0 0 auto;
+	}
+	
+	figure {
+		margin: 0;
+		
+		width: $item-width;
+		transform-style: preserve-3d;
+		transition: transform 0.5s;
+		transform-origin: 50% 50% (-$apothem);
+		
+		img {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0 $item-separation / 2;
+			opacity: 0.9;
+			&:not(:first-of-type) {
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform-origin: 50% 50% (-$apothem);
+			}
+			
+			@for $i from 2 through $n {
+				&:nth-child(#{$i}) {
+					transform: rotateY(#{($i - 1) * $theta}rad);
+				}
+			}
+		}
+	}
+	
+	.carouselBtn {
+		display: flex;
+		justify-content: center;
+		margin: 20px 0 0;
+		
+		button {
+			flex: 0 0 auto;
+			margin: 0 5px;
+			cursor: pointer;
+			color: var(--secondColor);
+			background: none;
+			border: 2px solid var(--thirdColor);
+            border-radius: 1.5rem;
+			letter-spacing: 1px;
+			padding: 5px 10px;
+            transition: .5s all;
+            &:hover{
+                transform: scale(1.1);
+            }
+		}
+	}
+	
+}
+    }
+    a{
+        color: var(--secondColor);
+        background-color: var(--thirdColor);
+        width: max-content;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+        border-radius: 1rem;
+        transition: .5s all;
+        justify-self: center;
+        animation: neon 3s infinite linear;
+        &:hover{
+            transform: scale(1.1);
+        }
+        }
+
+    .anime{
+        margin-top: 10%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .globe{
+            animation: globe 10s infinite linear;
+            width: 15%;
+            margin: 0 auto;
+
+        } 
+    } 
+}
 
 //  Main - Contact
+main.contact{
+    color: var(--secondColor);
+    p{
+        font-size: 1.5rem;
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20% 0 10% 0;
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+    .contact1{
+        display: flex;
+        .imagecontact1{
+            width: 50%;
+        }
+        .form{
+            fieldset{
+            border: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            p{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            input{
+                background-color: var(--firstColor);
+                border-radius: 20px;
+                border: solid var(--thirdColor);
+                height: 2.1rem;
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+                color: var(--secondColor);
+                font-size: 1rem;
+            }
+            #message{
+                margin: 0 auto;
+                width: 80%;
+                background-color: var(--firstColor);
+                color: var(--secondColor);
+                font-size: 1.2rem;
+                border: solid var(--thirdColor);
+                border-radius: 2rem;
+            }
+            .check input{
+                width: 1.5rem;
+            }
+            .check p{
+                margin: 0 12%;
+                font-size: 0.7rem;
+            }
+            .send{
+                width: 25%;
+            }
+            a{
+                text-transform: uppercase;
+                color: var(--secondColor);
+                background-color: var(--thirdColor);
+                width: max-content;
+                margin: 0 auto;
+                padding: 0.5rem 1rem;
+                border-radius: 1rem;
+                transition: .5s all;
+                justify-self: center;
+                animation: neon 3s infinite linear;
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+// FAQ
+.titre{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-size: 32px;
+        color: var(--secondColor);
+    }
+    .ligne{
+        display: block;
+        width: 60%;
+        padding: 1.5px;
+        background-color: var(--secondColor);
+    }
+}
+    .questions{ 
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: left;
+        p{
+            color: var(--thirdColor);
+        }
+    }
+}
 
 // Footer
 footer{
@@ -244,8 +490,19 @@ footer{
         filter: drop-shadow(0 0 0 0rem);
         }
 }
-
-// Media queries
+// Keyframs Page Portfolio
+@keyframes globe {
+        0%{ 
+        transform: translateX(0) rotate(0);
+    }
+        25%{
+        transform: translateX(40vw) rotate(720deg);
+    }
+        75%{
+        transform: translateX(-40vw) rotate(-720deg);
+    }
+}
+// Media queries page Index
 @media screen and (max-width:940px) {
     // Header
     header{
@@ -319,6 +576,7 @@ footer{
                 }
             }
         }
+// Media Queries Page Prestations
         main.prestations {
             h2 {
                 font-size: 1.5rem;
@@ -337,4 +595,58 @@ footer{
                 }
             }
         }
+}
+
+// Media Queries Page Portfolio
+@media screen and (max-width:940px){
+    main.portfolio {
+        section{
+            flex-direction: column;
+            .textAndCarousel{
+                flex-direction: column;
+                .text{
+                    width: 90%;
+                    p{
+                        font-size: 16px;  
+                    }
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    .iconify{
+                        font-size: 25px;
+                    }
+                }
+                .carousel{
+                    width: 100%;
+                    margin-bottom: 10%;
+                    figure{
+                        img{
+                        opacity: 1;
+                        }
+                    }
+                }
+            }
+            .reverse-2{
+            flex-direction: column-reverse;
+        } 
+            a{
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+// Media Queries Page Contact
+main.contact{
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .imagecontact1 img{
+        width:100%;
+        }
+    }
 }
