@@ -5,7 +5,6 @@
     --thirdColor: #2c8ec7;
     --fourthColor:##000000e6;
 }
-
 // Reset
 *{
     margin: 0;
@@ -31,7 +30,6 @@ img{
     width: 80%;
     margin: 0 auto;
 }
-
 // Header
 header{
     display: flex;
@@ -90,7 +88,6 @@ header{
         }
     }
 }
-
 // Main - Index page
 main.index{
     section{
@@ -138,8 +135,6 @@ main.index{
     }
 }
 // Main - Prestations page
-
-
 .prestations {
     margin-top: 15%;
     display: flex;
@@ -154,7 +149,11 @@ main.index{
         flex-direction: column;
         gap: 2rem;
         h2 {
-            font-size: 2rem;       
+            font-size: 2rem;    
+            text-align: center; 
+        }
+        img{
+            border-radius: 1.5rem;
         }
         a {
             text-transform: uppercase;
@@ -173,9 +172,52 @@ main.index{
         }
         
     }
+    .clients {
+        h2{
+            border-bottom: 2px solid var(--thirdColor);
+            width: max-content;
+            margin: 5% auto;
+        }
+        .bloc{
+            display: flex;
+            gap: 2.5rem;
+            .commentaire {
+                border: 0.1rem solid #2c8ec7;;
+                border-radius: 1.5rem;
+                padding: 0.8rem;
+                width: 50%;
+                margin: 0 auto;
+                font-family: Arial, sans-serif;
+                transition: .5s all;
+                animation: neon 3s infinite linear;
+                &:hover{
+                    transform: scale(1.1);
+                }
+                .auteur {
+                    font-weight: bold;
+                    margin-bottom: 0.2rem;
+                }
+                .note {
+                    display: inline-block;
+                    color: gold;
+                }
+                .photo {
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    float: left;
+                    margin-right: 0.8rem;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
 }
-    
-
 //  Main - Portfolio page
 main.portfolio{
     section{
@@ -186,6 +228,7 @@ main.portfolio{
         .textAndCarousel{
             display: flex;
             gap: 5%;
+            justify-content: center;
             align-items: center;
             .text{
                 width: 50%;
@@ -214,17 +257,40 @@ main.portfolio{
             } 
         }
         a{
-            margin-top: 2%;
+            color: var(--secondColor);
+            background-color: var(--thirdColor);
+            width: max-content;
+            margin: 2% auto 0;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            transition: .5s all;
+            justify-self: center;
+            animation: neon 3s infinite linear;
+            &:hover{
+                transform: scale(1.1);
+            }
         }
-// Carousel 
-// Variable
+    }    
+    .anime{
+        margin-top: 10%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        .globe{
+            animation: globe 10s infinite linear;
+            width: 15%;
+            margin: 0 auto;
+        } 
+    } 
+}
+// Variables parameters carrousel
 $n: 8;
 $item-width: 400px;
 $item-separation: 80px;
 $viewer-distance: 500px;
 $theta: 2 * 3.141592653589793 / $n; 
 $apothem: 482.842712474619px;
-
+// Carrousel
 .carousel {
 	padding: 20px;
 	perspective: $viewer-distance;
@@ -235,13 +301,12 @@ $apothem: 482.842712474619px;
 	> * {
 		flex: 0 0 auto;
 	}
-	
 	figure {
 		margin: 0;
 		width: $item-width;
 		transform-style: preserve-3d;
 		transition: transform 0.5s;
-		transform-origin: 50% 50% (-$apothem);		
+		transform-origin: 50% 50% (-$apothem);
 		img {
 			width: 100%;
 			box-sizing: border-box;
@@ -253,7 +318,6 @@ $apothem: 482.842712474619px;
 				top: 0;
 				transform-origin: 50% 50% (-$apothem);
 			}
-			
 			@for $i from 2 through $n {
 				&:nth-child(#{$i}) {
 					transform: rotateY(#{($i - 1) * $theta}rad);
@@ -261,12 +325,10 @@ $apothem: 482.842712474619px;
 			}
 		}
 	}
-	
 	.carouselBtn {
 		display: flex;
 		justify-content: center;
 		margin: 20px 0 0;
-		
 		button {
 			flex: 0 0 auto;
 			margin: 0 5px;
@@ -282,181 +344,137 @@ $apothem: 482.842712474619px;
                 transform: scale(1.1);
             }
 		}
-	}
-	
+	} 
 }
-    }
-    a{
-        color: var(--secondColor);
-        background-color: var(--thirdColor);
-        width: max-content;
-        margin: 0 auto;
-        padding: 0.5rem 1rem;
-        border-radius: 1rem;
-        transition: .5s all;
-        justify-self: center;
-        animation: neon 3s infinite linear;
-        &:hover{
-            transform: scale(1.1);
-        }
-        }
-
-    .anime{
-        margin-top: 10%;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        .globe{
-            animation: globe 10s infinite linear;
-            width: 15%;
-            margin: 0 auto;
-
-        } 
-    } 
-}
-
 //  Main - Contact
-main.contact.center{
-    margin-right: 8rem;
-    color: var(--secondColor);
-    p{
-        font-size: 1.5rem;
-    }
-    section{
+main.contact{
+    .icon{
+        margin: 20% 0 10% 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 20% 0 10% 0;
-        div.image{
-          padding: 0 auto;
+        img{
+            width: 10rem;
+            animation: plane 10s infinite linear;
         }
         .text{
+            color: var(--secondColor);
+            text-align: center;
             display: flex;
             flex-direction: column;
+            font-size: 1.5rem;
             gap: 1rem;
-            text-align: center;
-        }
-    }
-    div.contact1{
-        display: flex;
-        .imagecontact1{
-            width: 80%;
-            img{
-                width: 100%;
-                height: 90%;
+            p{
+                i{
+                    color: var(--thirdColor);
+                    font-size: 2rem;
+                    margin-right: 1%;
+                }
             }
         }
-        .form{
-            margin-right: 1rem;
-            width: 70%;
-            fieldset{
-            border: none;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
+    }
+    .formulaireContact{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        width: 90%;
+        margin: 0 auto;
+        .form1{
+            width: 40%;
+            color: var(--secondColor);
             p{
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                text-align: center;
             }
             input{
-                outline: none;
-                padding: 2%;
+                border-radius: 1rem;
                 background-color: var(--firstColor);
-                border-radius: 20px;
                 border: solid var(--thirdColor);
-                height: 1.9rem;
-                width: 70%;
-                display: block;
-                margin: 0 auto;
-                color: var(--secondColor);
-                font-size: 1rem;
-            }
-           textarea#message{
                 outline: none;
-                padding: 1%;
-                margin: 0 auto;
-                width: 70%;
-                height: 95%;
-                background-color: var(--firstColor);
                 color: var(--secondColor);
                 font-size: 1.2rem;
-                border: solid var(--thirdColor);
-                border-radius: 1rem;
+                padding: 0.7rem;
+                width: 80%;
+                margin: 0 auto 3%;
             }
-            div.check{
+            textarea#message{
+                background-color: var(--firstColor);
+                color: var(--secondColor);
+                border: solid var(--thirdColor);
+                outline: none;
+                font-size: 1.2rem;
+                border-radius: 1rem;
+                margin-bottom: 1rem;
+                padding: 0.7rem;
+            }
+            .check{
                 display: flex;
                 align-items: center;
-                padding: 0 5.5rem;
-            
+                margin: 3% 0;
+                gap: 3%;
+
                 input{
-                    width: 1.8rem;
+                    width: 5%;
+                    margin: 0;
                 }
-                p.check{
-                    font-size: 0.9rem;
-                }
-            }
-            .send{
-                width: 25%;
+                p{
+                    text-align: left;
+                }    
             }
             a{
-                text-transform: uppercase;
                 color: var(--secondColor);
                 background-color: var(--thirdColor);
                 width: max-content;
                 margin: 0 auto;
-                padding: 0.5rem 1rem;
+                padding: 0.5rem 2rem;
                 border-radius: 1rem;
                 transition: .5s all;
                 justify-self: center;
                 animation: neon 3s infinite linear;
                 &:hover{
-                    transform: scale(1.1);
+                    transform:  scale(1.1);
                 }
             }
         }
     }
-}
-    .titre{
-        margin-bottom: 4rem;
-    }
-    .questions{ 
+    .faq{
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        text-align: left;
-        h1{
+        margin-top: 4rem;  
+        text-align: center;
+        h2{
+            font-size: 2.5rem;
+            color: var(--secondColor);
+        }
+        .ligne{
+            display: block;
+            width: 60%;
+            height: 0.1rem;
+            background-color: var(--thirdColor);
+            margin: 0 auto;
+        }
+        .questionsFaq{
+            margin-top: 4rem;
             font-size: 1.5rem;
+            color: var(--secondColor);
+            margin-bottom: 1.5rem;
         }
         p{
             font-size: 1rem;
             color: var(--thirdColor);
+            width: 60%;
+            margin: 0 auto;
         }
     }
 }
-//faq
-.titre{
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2{
-        font-size: 32px;
-        color: var(--secondColor);
-    }
-    .ligne{
-        display: block;
-        width: 60%;
-        padding: 1.5px;
-        background-color: var(--thirdColor);
-    }
-}
-//Questions
 // Footer
 footer{
-    margin-top: 8%;
     color: var(--secondColor);
     display: flex;
+    width: 100%;
+    margin: 5% auto 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -465,7 +483,6 @@ footer{
         display: flex;
         width: 50%;
         justify-content: space-around;
-        margin: 0 auto;
         border-radius: 10rem;
         background-color: var(--fourthColor);
         box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
@@ -480,7 +497,6 @@ footer{
         }
     }
 }
-
 // Keyframes
 @keyframes plane {
     0%{
@@ -601,7 +617,7 @@ footer{
                 }
             }
         }
-// Media Queries Page Prestations
+        // Media Queries Page Prestations
         main.prestations {
             h2 {
                 font-size: 1.5rem;
@@ -609,69 +625,113 @@ footer{
             a {
                 font-size: 0.8rem;
             }
-        }
-        // Footer
-        footer{
-            min-width: 10rem;
-            a{
-                img{
-                    width: 2rem;
-                    height: 2rem;
+            .clients .bloc {
+                flex-direction: column;
+                .commentaire{
+                    width: 80%;
                 }
             }
         }
-}
-
-// Media Queries Page Portfolio
-@media screen and (max-width:940px){
-    main.portfolio {
-        section{
-            flex-direction: column;
-            .textAndCarousel{
+     // Media Queries Page Portfolio
+        main.portfolio {
+            section{
                 flex-direction: column;
-                .text{
-                    width: 90%;
-                    p{
-                        font-size: 16px;  
+                .textAndCarousel{
+                    flex-direction: column;
+                    .text{
+                        width: 90%;
+                        p{
+                            font-size: 16px;  
+                        }
+                        h2{
+                            font-size: 1.5rem;
+                        }
+                        .iconify{
+                            font-size: 25px;
+                        }
                     }
-                    h2{
-                        font-size: 1.5rem;
-                    }
-                    .iconify{
-                        font-size: 25px;
-                    }
-                }
-                .carousel{
-                    width: 100%;
-                    margin-bottom: 10%;
-                    figure{
-                        img{
-                        opacity: 1;
+                    .carousel{
+                        width: 100%;
+                        margin-bottom: 10%;
+                        figure{
+                            img{
+                            opacity: 1;
+                            }
                         }
                     }
                 }
-            }
-            .reverse-2{
-            flex-direction: column-reverse;
-        } 
-            a{
-                font-size: 0.8rem;
+                .reverse-2{
+                flex-direction: column-reverse;
+                } 
+                a{
+                    font-size: 0.8rem;
+                }
             }
         }
-    }
-}
-// Media Queries Page Contact
-main.contact{
-    section{
-        display: flex;
-        flex-direction: column;
-    }
-    .contact1{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .imagecontact1 img{
-        width:100%;
+        // Media Queries Page Contact
+        main.contact{
+            section.icon{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                img{
+                    width: 40%;
+                    margin: 0 auto;
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+            .formulaireContact{
+                display: flex;
+                flex-direction: column;
+                img{
+                    margin: 0 auto;
+                    width:60%;
+                }
+                .form1{
+                    margin: 0 auto;
+                    width: 100%;
+                    p{
+                        font-size: 0.8rem;
+                        margin-bottom: 2rem;
+                    }
+                    input{
+                        font-size: 1rem;
+                        height: 1rem;
+                    }
+                    textarea#message{
+                        height: 10rem;
+                    }
+                    .check{
+                        p{
+                            margin-bottom: 0;
+                            font-size: 0.8rem;
+                        }
+                    }
+                    a{   
+                        margin-top: 5%;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+            .faq{
+                h2{
+                    font-size: 1.4rem;
+                }
+                .questionsFaq{
+                    text-align: center;
+                    font-size: 1.1rem;
+                }
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    // Footer
+    footer{
+        a{
+            font-size: 0.5rem;
         }
     }
 }

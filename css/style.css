@@ -152,6 +152,10 @@ main.index section.reverse {
 }
 .prestations section h2 {
   font-size: 2rem;
+  text-align: center;
+}
+.prestations section img {
+  border-radius: 1.5rem;
 }
 .prestations section a {
   text-transform: uppercase;
@@ -169,6 +173,51 @@ main.index section.reverse {
 .prestations section a:hover {
   transform: scale(1.1);
 }
+.prestations .clients h2 {
+  border-bottom: 2px solid var(--thirdColor);
+  width: -moz-max-content;
+  width: max-content;
+  margin: 5% auto;
+}
+.prestations .clients .bloc {
+  display: flex;
+  gap: 2.5rem;
+}
+.prestations .clients .bloc .commentaire {
+  border: 0.1rem solid #2c8ec7;
+  border-radius: 1.5rem;
+  padding: 0.8rem;
+  width: 50%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  transition: 0.5s all;
+  animation: neon 3s infinite linear;
+}
+.prestations .clients .bloc .commentaire:hover {
+  transform: scale(1.1);
+}
+.prestations .clients .bloc .commentaire .auteur {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+.prestations .clients .bloc .commentaire .note {
+  display: inline-block;
+  color: gold;
+}
+.prestations .clients .bloc .commentaire .photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin-right: 0.8rem;
+}
+.prestations .clients .bloc .commentaire .photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 main.portfolio section {
   display: flex;
@@ -179,6 +228,7 @@ main.portfolio section {
 main.portfolio section .textAndCarousel {
   display: flex;
   gap: 5%;
+  justify-content: center;
   align-items: center;
 }
 main.portfolio section .textAndCarousel .text {
@@ -207,92 +257,18 @@ main.portfolio section .textAndCarousel .text .iconify {
   font-size: 50px;
 }
 main.portfolio section a {
-  margin-top: 2%;
-}
-main.portfolio section .carousel {
-  padding: 20px;
-  perspective: 500px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main.portfolio section .carousel > * {
-  flex: 0 0 auto;
-}
-main.portfolio section .carousel figure {
-  margin: 0;
-  width: 400px;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  transform-origin: 50% 50% -482.8427124746px;
-}
-main.portfolio section .carousel figure img {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 40px;
-  opacity: 0.9;
-}
-main.portfolio section .carousel figure img:not(:first-of-type) {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: 50% 50% -482.8427124746px;
-}
-main.portfolio section .carousel figure img:nth-child(2) {
-  transform: rotateY(0.7853981634rad);
-}
-main.portfolio section .carousel figure img:nth-child(3) {
-  transform: rotateY(1.5707963268rad);
-}
-main.portfolio section .carousel figure img:nth-child(4) {
-  transform: rotateY(2.3561944902rad);
-}
-main.portfolio section .carousel figure img:nth-child(5) {
-  transform: rotateY(3.1415926536rad);
-}
-main.portfolio section .carousel figure img:nth-child(6) {
-  transform: rotateY(3.926990817rad);
-}
-main.portfolio section .carousel figure img:nth-child(7) {
-  transform: rotateY(4.7123889804rad);
-}
-main.portfolio section .carousel figure img:nth-child(8) {
-  transform: rotateY(5.4977871438rad);
-}
-main.portfolio section .carousel .carouselBtn {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 0;
-}
-main.portfolio section .carousel .carouselBtn button {
-  flex: 0 0 auto;
-  margin: 0 5px;
-  cursor: pointer;
-  color: var(--secondColor);
-  background: none;
-  border: 2px solid var(--thirdColor);
-  border-radius: 1.5rem;
-  letter-spacing: 1px;
-  padding: 5px 10px;
-  transition: 0.5s all;
-}
-main.portfolio section .carousel .carouselBtn button:hover {
-  transform: scale(1.1);
-}
-main.portfolio a {
   color: var(--secondColor);
   background-color: var(--thirdColor);
   width: -moz-max-content;
   width: max-content;
-  margin: 0 auto;
+  margin: 2% auto 0;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   transition: 0.5s all;
   justify-self: center;
   animation: neon 3s infinite linear;
 }
-main.portfolio a:hover {
+main.portfolio section a:hover {
   transform: scale(1.1);
 }
 main.portfolio .anime {
@@ -307,146 +283,202 @@ main.portfolio .anime .globe {
   margin: 0 auto;
 }
 
-main.contact.center {
-  margin-right: 8rem;
-  color: var(--secondColor);
+.carousel {
+  padding: 20px;
+  perspective: 500px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-main.contact.center p {
-  font-size: 1.5rem;
+.carousel > * {
+  flex: 0 0 auto;
 }
-main.contact.center section {
+.carousel figure {
+  margin: 0;
+  width: 400px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  opacity: 0.9;
+}
+.carousel figure img:not(:first-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 50% 50% -482.8427124746px;
+}
+.carousel figure img:nth-child(2) {
+  transform: rotateY(0.7853981634rad);
+}
+.carousel figure img:nth-child(3) {
+  transform: rotateY(1.5707963268rad);
+}
+.carousel figure img:nth-child(4) {
+  transform: rotateY(2.3561944902rad);
+}
+.carousel figure img:nth-child(5) {
+  transform: rotateY(3.1415926536rad);
+}
+.carousel figure img:nth-child(6) {
+  transform: rotateY(3.926990817rad);
+}
+.carousel figure img:nth-child(7) {
+  transform: rotateY(4.7123889804rad);
+}
+.carousel figure img:nth-child(8) {
+  transform: rotateY(5.4977871438rad);
+}
+.carousel .carouselBtn {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 20px 0 0;
+}
+.carousel .carouselBtn button {
+  flex: 0 0 auto;
+  margin: 0 5px;
+  cursor: pointer;
+  color: var(--secondColor);
+  background: none;
+  border: 2px solid var(--thirdColor);
+  border-radius: 1.5rem;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  transition: 0.5s all;
+}
+.carousel .carouselBtn button:hover {
+  transform: scale(1.1);
+}
+
+main.contact .icon {
   margin: 20% 0 10% 0;
-}
-main.contact.center section div.image {
-  padding: 0 auto;
-}
-main.contact.center section .text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main.contact .icon img {
+  width: 10rem;
+  animation: plane 10s infinite linear;
+}
+main.contact .icon .text {
+  color: var(--secondColor);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
   gap: 1rem;
+}
+main.contact .icon .text p i {
+  color: var(--thirdColor);
+  font-size: 2rem;
+  margin-right: 1%;
+}
+main.contact .formulaireContact {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+main.contact .formulaireContact .form1 {
+  width: 40%;
+  color: var(--secondColor);
+}
+main.contact .formulaireContact .form1 p {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
-main.contact.center div.contact1 {
-  display: flex;
-}
-main.contact.center div.contact1 .imagecontact1 {
-  width: 80%;
-}
-main.contact.center div.contact1 .imagecontact1 img {
-  width: 100%;
-  height: 90%;
-}
-main.contact.center div.contact1 .form {
-  margin-right: 1rem;
-  width: 70%;
-}
-main.contact.center div.contact1 .form fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-main.contact.center div.contact1 .form fieldset p {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main.contact.center div.contact1 .form fieldset input {
-  outline: none;
-  padding: 2%;
+main.contact .formulaireContact .form1 input {
+  border-radius: 1rem;
   background-color: var(--firstColor);
-  border-radius: 20px;
   border: solid var(--thirdColor);
-  height: 1.9rem;
-  width: 70%;
-  display: block;
-  margin: 0 auto;
-  color: var(--secondColor);
-  font-size: 1rem;
-}
-main.contact.center div.contact1 .form fieldset textarea#message {
   outline: none;
-  padding: 1%;
-  margin: 0 auto;
-  width: 70%;
-  height: 95%;
-  background-color: var(--firstColor);
   color: var(--secondColor);
   font-size: 1.2rem;
-  border: solid var(--thirdColor);
-  border-radius: 1rem;
+  padding: 0.7rem;
+  width: 80%;
+  margin: 0 auto 3%;
 }
-main.contact.center div.contact1 .form fieldset div.check {
+main.contact .formulaireContact .form1 textarea#message {
+  background-color: var(--firstColor);
+  color: var(--secondColor);
+  border: solid var(--thirdColor);
+  outline: none;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+}
+main.contact .formulaireContact .form1 .check {
   display: flex;
   align-items: center;
-  padding: 0 5.5rem;
+  margin: 3% 0;
+  gap: 3%;
 }
-main.contact.center div.contact1 .form fieldset div.check input {
-  width: 1.8rem;
+main.contact .formulaireContact .form1 .check input {
+  width: 5%;
+  margin: 0;
 }
-main.contact.center div.contact1 .form fieldset div.check p.check {
-  font-size: 0.9rem;
+main.contact .formulaireContact .form1 .check p {
+  text-align: left;
 }
-main.contact.center div.contact1 .form fieldset .send {
-  width: 25%;
-}
-main.contact.center div.contact1 .form fieldset a {
-  text-transform: uppercase;
+main.contact .formulaireContact .form1 a {
   color: var(--secondColor);
   background-color: var(--thirdColor);
   width: -moz-max-content;
   width: max-content;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 1rem;
   transition: 0.5s all;
   justify-self: center;
   animation: neon 3s infinite linear;
 }
-main.contact.center div.contact1 .form fieldset a:hover {
+main.contact .formulaireContact .form1 a:hover {
   transform: scale(1.1);
 }
-main.contact.center .titre {
-  margin-bottom: 4rem;
-}
-main.contact.center .questions {
+main.contact .faq {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  text-align: left;
+  margin-top: 4rem;
+  text-align: center;
 }
-main.contact.center .questions h1 {
-  font-size: 1.5rem;
-}
-main.contact.center .questions p {
-  font-size: 1rem;
-  color: var(--thirdColor);
-}
-
-.titre {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.titre h2 {
-  font-size: 32px;
+main.contact .faq h2 {
+  font-size: 2.5rem;
   color: var(--secondColor);
 }
-.titre .ligne {
+main.contact .faq .ligne {
   display: block;
   width: 60%;
-  padding: 1.5px;
+  height: 0.1rem;
   background-color: var(--thirdColor);
+  margin: 0 auto;
+}
+main.contact .faq .questionsFaq {
+  margin-top: 4rem;
+  font-size: 1.5rem;
+  color: var(--secondColor);
+  margin-bottom: 1.5rem;
+}
+main.contact .faq p {
+  font-size: 1rem;
+  color: var(--thirdColor);
+  width: 60%;
+  margin: 0 auto;
 }
 
 footer {
-  margin-top: 8%;
   color: var(--secondColor);
   display: flex;
+  width: 100%;
+  margin: 5% auto 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -456,7 +488,6 @@ footer nav {
   display: flex;
   width: 50%;
   justify-content: space-around;
-  margin: 0 auto;
   border-radius: 10rem;
   background-color: var(--fourthColor);
   box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
@@ -584,15 +615,12 @@ footer nav a:hover {
   main.prestations a {
     font-size: 0.8rem;
   }
-  footer {
-    min-width: 10rem;
+  main.prestations .clients .bloc {
+    flex-direction: column;
   }
-  footer a img {
-    width: 2rem;
-    height: 2rem;
+  main.prestations .clients .bloc .commentaire {
+    width: 80%;
   }
-}
-@media screen and (max-width: 940px) {
   main.portfolio section {
     flex-direction: column;
   }
@@ -624,16 +652,60 @@ footer nav a:hover {
   main.portfolio section a {
     font-size: 0.8rem;
   }
-}
-main.contact section {
-  display: flex;
-  flex-direction: column;
-}
-main.contact .contact1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main.contact .contact1 .imagecontact1 img {
-  width: 100%;
+  main.contact section.icon {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  main.contact section.icon img {
+    width: 40%;
+    margin: 0 auto;
+  }
+  main.contact section.icon p {
+    font-size: 0.9rem;
+  }
+  main.contact .formulaireContact {
+    display: flex;
+    flex-direction: column;
+  }
+  main.contact .formulaireContact img {
+    margin: 0 auto;
+    width: 60%;
+  }
+  main.contact .formulaireContact .form1 {
+    margin: 0 auto;
+    width: 100%;
+  }
+  main.contact .formulaireContact .form1 p {
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  main.contact .formulaireContact .form1 input {
+    font-size: 1rem;
+    height: 1rem;
+  }
+  main.contact .formulaireContact .form1 textarea#message {
+    height: 10rem;
+  }
+  main.contact .formulaireContact .form1 .check p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+  main.contact .formulaireContact .form1 a {
+    margin-top: 5%;
+    font-size: 0.7rem;
+  }
+  main.contact .faq h2 {
+    font-size: 1.4rem;
+  }
+  main.contact .faq .questionsFaq {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  main.contact .faq p {
+    font-size: 0.9rem;
+  }
+  footer a {
+    font-size: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
