@@ -238,12 +238,10 @@ $apothem: 482.842712474619px;
 	
 	figure {
 		margin: 0;
-		
 		width: $item-width;
 		transform-style: preserve-3d;
 		transition: transform 0.5s;
-		transform-origin: 50% 50% (-$apothem);
-		
+		transform-origin: 50% 50% (-$apothem);		
 		img {
 			width: 100%;
 			box-sizing: border-box;
@@ -318,7 +316,8 @@ $apothem: 482.842712474619px;
 }
 
 //  Main - Contact
-main.contact{
+main.contact.center{
+    margin-right: 8rem;
     color: var(--secondColor);
     p{
         font-size: 1.5rem;
@@ -328,6 +327,9 @@ main.contact{
         justify-content: center;
         align-items: center;
         margin: 20% 0 10% 0;
+        div.image{
+          padding: 0 auto;
+        }
         .text{
             display: flex;
             flex-direction: column;
@@ -335,12 +337,18 @@ main.contact{
             text-align: center;
         }
     }
-    .contact1{
+    div.contact1{
         display: flex;
         .imagecontact1{
-            width: 50%;
+            width: 80%;
+            img{
+                width: 100%;
+                height: 90%;
+            }
         }
         .form{
+            margin-right: 1rem;
+            width: 70%;
             fieldset{
             border: none;
             display: flex;
@@ -349,34 +357,44 @@ main.contact{
             p{
                 display: flex;
                 flex-direction: column;
-                text-align: center;
+                align-items: center;
             }
             input{
+                outline: none;
+                padding: 2%;
                 background-color: var(--firstColor);
                 border-radius: 20px;
                 border: solid var(--thirdColor);
-                height: 2.1rem;
-                width: 80%;
+                height: 1.9rem;
+                width: 70%;
                 display: block;
                 margin: 0 auto;
                 color: var(--secondColor);
                 font-size: 1rem;
             }
-            #message{
+           textarea#message{
+                outline: none;
+                padding: 1%;
                 margin: 0 auto;
-                width: 80%;
+                width: 70%;
+                height: 95%;
                 background-color: var(--firstColor);
                 color: var(--secondColor);
                 font-size: 1.2rem;
                 border: solid var(--thirdColor);
-                border-radius: 2rem;
+                border-radius: 1rem;
             }
-            .check input{
-                width: 1.5rem;
-            }
-            .check p{
-                margin: 0 12%;
-                font-size: 0.7rem;
+            div.check{
+                display: flex;
+                align-items: center;
+                padding: 0 5.5rem;
+            
+                input{
+                    width: 1.8rem;
+                }
+                p.check{
+                    font-size: 0.9rem;
+                }
             }
             .send{
                 width: 25%;
@@ -399,7 +417,24 @@ main.contact{
         }
     }
 }
-// FAQ
+    .titre{
+        margin-bottom: 4rem;
+    }
+    .questions{ 
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: left;
+        h1{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1rem;
+            color: var(--thirdColor);
+        }
+    }
+}
+//faq
 .titre{
     padding: 2rem;
     display: flex;
@@ -413,20 +448,10 @@ main.contact{
         display: block;
         width: 60%;
         padding: 1.5px;
-        background-color: var(--secondColor);
+        background-color: var(--thirdColor);
     }
 }
-    .questions{ 
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: left;
-        p{
-            color: var(--thirdColor);
-        }
-    }
-}
-
+//Questions
 // Footer
 footer{
     margin-top: 8%;
