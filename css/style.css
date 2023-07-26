@@ -174,10 +174,9 @@ main.index section.reverse {
   transform: scale(1.1);
 }
 .prestations .clients h2 {
-  border-bottom: 2px solid var(--thirdColor);
-  width: -moz-max-content;
-  width: max-content;
-  margin: 5% auto;
+  width: 80%;
+  border-bottom: 1px solid var(--thirdColor);
+  margin: 0 auto;
 }
 .prestations .clients .bloc {
   display: flex;
