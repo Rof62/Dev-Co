@@ -1,8 +1,8 @@
 :root {
-  --firstColor:#000000;
-  --secondColor:#fff;
+  --firstColor: #000000;
+  --secondColor: #fff;
   --thirdColor: #2c8ec7;
-  --fourthColor:##000000e6;
+  --fourthColor: ##000000e6;
 }
 
 * {
@@ -14,7 +14,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
@@ -84,7 +84,7 @@ header nav ul {
   gap: 2rem;
 }
 header nav ul li a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 header nav ul li a:hover {
   color: var(--thirdColor);
@@ -236,14 +236,14 @@ main.portfolio section .textAndCarousel .text {
   text-align: center;
   align-items: center;
 }
-main.portfolio section .textAndCarousel .text h2, main.portfolio section .textAndCarousel .text p {
+main.portfolio section .textAndCarousel .text h2,
+main.portfolio section .textAndCarousel .text p {
   color: var(--secondColor);
 }
 main.portfolio section .textAndCarousel .text h2 {
-  font-size: 40px;
+  font-size: 2rem;
 }
 main.portfolio section .textAndCarousel .text p {
-  font-size: 19px;
   margin-top: 5%;
 }
 main.portfolio section .textAndCarousel .text .technologie {
@@ -254,7 +254,7 @@ main.portfolio section .textAndCarousel .text .technologie {
 }
 main.portfolio section .textAndCarousel .text .iconify {
   margin-top: 5%;
-  font-size: 50px;
+  font-size: 2.5rem;
 }
 main.portfolio section a {
   color: var(--secondColor);
@@ -547,6 +547,9 @@ footer nav a:hover {
   }
 }
 @media screen and (max-width: 940px) {
+  html {
+    font-size: 16px;
+  }
   header nav {
     min-width: 10rem;
   }
@@ -595,18 +598,22 @@ footer nav a:hover {
   header .active ul {
     transform: translateY(7.5rem);
   }
-  main.index section, main.index section.reverse {
+  main.index section,
+  main.index section.reverse {
     flex-direction: column-reverse;
     margin-top: 20%;
   }
-  main.index section .text, main.index section.reverse .text {
+  main.index section .text,
+  main.index section.reverse .text {
     width: 80%;
   }
-  main.index section .text h2, main.index section.reverse .text h2 {
+  main.index section .text h2,
+  main.index section.reverse .text h2 {
     font-size: 1.5rem;
     text-align: center;
   }
-  main.index section .text a, main.index section.reverse .text a {
+  main.index section .text a,
+  main.index section.reverse .text a {
     font-size: 0.8rem;
   }
   main.prestations h2 {
@@ -629,9 +636,6 @@ footer nav a:hover {
   }
   main.portfolio section .textAndCarousel .text {
     width: 90%;
-  }
-  main.portfolio section .textAndCarousel .text p {
-    font-size: 16px;
   }
   main.portfolio section .textAndCarousel .text h2 {
     font-size: 1.5rem;
@@ -705,7 +709,8 @@ footer nav a:hover {
   main.contact .faq p {
     font-size: 0.9rem;
   }
-  footer a {
-    font-size: 0.5rem;
+  footer nav a img {
+    width: 50%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

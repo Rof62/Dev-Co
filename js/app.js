@@ -9,10 +9,10 @@ menu.addEventListener('click', (e) => {
 
 // Carrousel
 
-var carousels = document.querySelectorAll('.carousel');
+let carousels = document.querySelectorAll('.carousel');
 
 carousels.forEach(function(carousel) {
-var figure = carousel.querySelector('figure'),
+let figure = carousel.querySelector('figure'),
     nav = carousel.querySelector('.carouselBtn'),
     numImages = figure.childElementCount,
     theta = 2 * Math.PI / numImages,
@@ -23,7 +23,7 @@ nav.addEventListener('click', onClick, true);
 function onClick(e) {
     e.stopPropagation();
 
-    var t = e.target;
+    let t = e.target;
     if (t.tagName.toUpperCase() != 'BUTTON')
     return;
 
@@ -32,7 +32,6 @@ function onClick(e) {
     } else {
         currImage--;
     }
-
     figure.style.transform = `rotateY(${currImage * -theta}rad)`;
 }
 });
