@@ -413,123 +413,41 @@ main.portfolio .anime .globe {
   transform: scale(1.1);
 }
 
-main.contact .icon {
-  margin: 20% 0 10% 0;
+main.contact {
+  margin-top: 30vh;
+}
+main.contact .infosContact {
+  display: flex;
+  justify-content: space-around;
+}
+main.contact .infosContact .adress, main.contact .infosContact .phone, main.contact .infosContact .mail {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-}
-main.contact .icon img {
   width: 10rem;
-  animation: plane 10s infinite linear;
 }
-main.contact .icon .text {
-  color: var(--secondColor);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.5rem;
-  gap: 1rem;
-}
-main.contact .icon .text p i {
-  color: var(--thirdColor);
-  font-size: 2rem;
-  margin-right: 1%;
-}
-main.contact .formulaireContact {
+main.contact .infosContact .adress .icone, main.contact .infosContact .phone .icone, main.contact .infosContact .mail .icone {
+  background-color: var(--thirdColor);
+  border-radius: 50%;
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  width: 90%;
-  margin: 0 auto;
-}
-main.contact .formulaireContact .form1 {
-  width: 40%;
-  color: var(--secondColor);
-}
-main.contact .formulaireContact .form1 p {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-main.contact .formulaireContact .form1 input {
-  border-radius: 1rem;
-  background-color: var(--firstColor);
-  border: solid var(--thirdColor);
-  outline: none;
-  color: var(--secondColor);
-  font-size: 1.2rem;
-  padding: 0.7rem;
-  width: 80%;
-  margin: 0 auto 3%;
-}
-main.contact .formulaireContact .form1 textarea#message {
-  background-color: var(--firstColor);
-  color: var(--secondColor);
-  border: solid var(--thirdColor);
-  outline: none;
-  font-size: 1.2rem;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.7rem;
-}
-main.contact .formulaireContact .form1 .check {
-  display: flex;
   align-items: center;
-  margin: 3% 0;
-  gap: 3%;
+  width: 5rem;
+  height: 5rem;
 }
-main.contact .formulaireContact .form1 .check input {
-  width: 5%;
-  margin: 0;
-}
-main.contact .formulaireContact .form1 .check p {
-  text-align: left;
-}
-main.contact .formulaireContact .form1 a {
-  color: var(--secondColor);
-  background-color: var(--thirdColor);
+main.contact .infosContact .adress h4, main.contact .infosContact .phone h4, main.contact .infosContact .mail h4 {
+  color: var(--thirdColor);
   width: -moz-max-content;
   width: max-content;
-  margin: 0 auto;
-  padding: 0.5rem 2rem;
-  border-radius: 1rem;
-  transition: 0.5s all;
-  justify-self: center;
-  animation: neon 3s infinite linear;
+  margin: 0.8rem auto 0;
 }
-main.contact .formulaireContact .form1 a:hover {
-  transform: scale(1.1);
-}
-main.contact .faq {
-  display: flex;
-  flex-direction: column;
-  margin-top: 4rem;
-  text-align: center;
-}
-main.contact .faq h2 {
-  font-size: 2.5rem;
+main.contact .infosContact .adress p, main.contact .infosContact .phone p, main.contact .infosContact .mail p {
   color: var(--secondColor);
-}
-main.contact .faq .ligne {
-  display: block;
-  width: 60%;
-  height: 0.1rem;
-  background-color: var(--thirdColor);
-  margin: 0 auto;
-}
-main.contact .faq .questionsFaq {
-  margin-top: 4rem;
-  font-size: 1.5rem;
-  color: var(--secondColor);
-  margin-bottom: 1.5rem;
-}
-main.contact .faq p {
-  font-size: 1rem;
-  color: var(--thirdColor);
-  width: 60%;
-  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 0.8rem;
+  margin: 0.5rem auto 0;
 }
 
 footer {
@@ -713,59 +631,6 @@ footer nav a:hover {
   }
   main.portfolio section a {
     font-size: 0.8rem;
-  }
-  main.contact section.icon {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  main.contact section.icon img {
-    width: 40%;
-    margin: 0 auto;
-  }
-  main.contact section.icon p {
-    font-size: 0.9rem;
-  }
-  main.contact .formulaireContact {
-    display: flex;
-    flex-direction: column;
-  }
-  main.contact .formulaireContact img {
-    margin: 0 auto;
-    width: 60%;
-  }
-  main.contact .formulaireContact .form1 {
-    margin: 0 auto;
-    width: 100%;
-  }
-  main.contact .formulaireContact .form1 p {
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-  }
-  main.contact .formulaireContact .form1 input {
-    font-size: 1rem;
-    height: 1rem;
-  }
-  main.contact .formulaireContact .form1 textarea#message {
-    height: 10rem;
-  }
-  main.contact .formulaireContact .form1 .check p {
-    margin-bottom: 0;
-    font-size: 0.8rem;
-  }
-  main.contact .formulaireContact .form1 a {
-    margin-top: 5%;
-    font-size: 0.7rem;
-  }
-  main.contact .faq h2 {
-    font-size: 1.4rem;
-  }
-  main.contact .faq .questionsFaq {
-    text-align: center;
-    font-size: 1.1rem;
-  }
-  main.contact .faq p {
-    font-size: 0.9rem;
   }
   footer nav a img {
     width: 80%;
