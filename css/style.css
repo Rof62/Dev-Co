@@ -149,6 +149,7 @@ main.index section.reverse {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-x: hidden;
 }
 .prestations section h2 {
   font-size: 2rem;
@@ -156,6 +157,7 @@ main.index section.reverse {
 }
 .prestations section img {
   border-radius: 1.5rem;
+  width: 100%;
 }
 .prestations section a {
   text-transform: uppercase;
@@ -173,10 +175,26 @@ main.index section.reverse {
 .prestations section a:hover {
   transform: scale(1.1);
 }
+.prestations section .position {
+  display: flex;
+  justify-content: space-between;
+}
+.prestations section .taille {
+  width: 45%;
+}
+.prestations section .devApp1 {
+  transform: translateX(-5rem);
+  transition: 1.3s;
+}
+.prestations section .devApp2 {
+  transform: translateX(5rem);
+  transition: 1.3s;
+}
 .prestations .clients h2 {
-  width: 80%;
-  border-bottom: 1px solid var(--thirdColor);
-  margin: 0 auto;
+  border-bottom: 2px solid var(--thirdColor);
+  width: -moz-max-content;
+  width: max-content;
+  margin: 5% auto;
 }
 .prestations .clients .bloc {
   display: flex;
@@ -235,25 +253,66 @@ main.portfolio section .textAndCarousel .text {
   text-align: center;
   align-items: center;
 }
-main.portfolio section .textAndCarousel .text h2,
-main.portfolio section .textAndCarousel .text p {
+main.portfolio section .textAndCarousel .text h2, main.portfolio section .textAndCarousel .text p {
   color: var(--secondColor);
 }
 main.portfolio section .textAndCarousel .text h2 {
   font-size: 2rem;
 }
 main.portfolio section .textAndCarousel .text p {
+  font-size: 1rem;
   margin-top: 5%;
 }
-main.portfolio section .textAndCarousel .text .technologie {
+main.portfolio section .textAndCarousel .text .technologie1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-top: 5%;
+  color: #2c8ec7;
+  cursor: pointer;
+  text-decoration: underline;
 }
-main.portfolio section .textAndCarousel .text .iconify {
+main.portfolio section .textAndCarousel .text .technologie2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  color: #2c8ec7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+main.portfolio section .textAndCarousel .text .technologie3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+  color: #2c8ec7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+main.portfolio section .textAndCarousel .text .iconify1 {
   margin-top: 5%;
   font-size: 2.5rem;
+  transform: translateX(-150%);
+}
+main.portfolio section .textAndCarousel .text .iconify1.moved {
+  transform: translateX(0);
+}
+main.portfolio section .textAndCarousel .text .iconify2 {
+  margin-top: 5%;
+  font-size: 2.5rem;
+  transform: translateX(-250%);
+}
+main.portfolio section .textAndCarousel .text .iconify2.moved {
+  transform: translateX(0);
+}
+main.portfolio section .textAndCarousel .text .iconify3 {
+  margin-top: 5%;
+  font-size: 2.5rem;
+  transform: translateX(-150%);
+}
+main.portfolio section .textAndCarousel .text .iconify3.moved {
+  transform: translateX(0);
 }
 main.portfolio section a {
   color: var(--secondColor);
