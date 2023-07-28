@@ -500,6 +500,11 @@ main.contact{
             border-radius: 0.5rem;
             text-transform: uppercase;
             padding: 0.5rem;
+            transition: .5s all;
+            &:hover{
+                filter:brightness(1.2);
+                
+            }
         }
     }
     section.faq{

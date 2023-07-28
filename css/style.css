@@ -493,6 +493,10 @@ main.contact form a {
   border-radius: 0.5rem;
   text-transform: uppercase;
   padding: 0.5rem;
+  transition: 0.5s all;
+}
+main.contact form a:hover {
+  filter: brightness(1.2);
 }
 main.contact section.faq {
   margin-top: 6rem;
