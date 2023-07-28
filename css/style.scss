@@ -462,7 +462,87 @@ main.contact{
             }
         }        
     }
+    h2{
+        color: var(--secondColor);
+        font-size: 2rem;
+        text-align: center;
+        margin:5rem 0 2rem 0
+    }
+    form{
+        display: flex;
+        gap: 0.4rem;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 70%;
+        input,textarea{
+            border: 2px solid var(--thirdColor);
+            background-color: var(--firstColor);
+            border-radius: 0.5rem;
+            color:var(--secondColor);
+            padding: 0.5rem;
+            outline: var(--thirdColor);
+        }
+        input{  
+            height: 2.5rem;
+        }
+        ::placeholder{
+            color: var(--secondColor);
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+        a{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            color: var(--secondColor);
+            background-color: var(--thirdColor);
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            padding: 0.5rem;
+        }
+    }
+    section.faq{
+        margin-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+        .line{
+            background-color: var(--thirdColor);
+            height: 1px;
+            width: 70%;
+            margin-bottom: 1.5rem;
+        }
+        p{
+            color: var(--secondColor);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            i{
+                color: var(--thirdColor);
+                transition: 1s all;
+            }
+        }
+        .paragraphesVolet{
+            width: 70%;
+            margin: 0 auto;
+            color: var(--thirdColor);
+            text-align: center;
+            margin-bottom: 1rem;
+            display: none;
+        }
+        .questions{
+            cursor: pointer;
+        }
+    }
 }
+
 
 // Footer
 footer {
@@ -710,7 +790,26 @@ footer {
     }
 
     // Media Queries Page Contact
-   
+   main.contact{
+    margin-top: 20vh;
+    .infosContact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    form{
+        width: 100%;
+        margin-top:0;
+    }
+    section.faq{
+        margin-top: 2rem;
+        .paragraphesVolet{
+            width: 100%;
+        }
+    }
+    
+   }
 
     // Footer
     footer {

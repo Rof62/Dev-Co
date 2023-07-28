@@ -449,6 +449,90 @@ main.contact .infosContact .adress p, main.contact .infosContact .phone p, main.
   font-size: 0.8rem;
   margin: 0.5rem auto 0;
 }
+main.contact h2 {
+  color: var(--secondColor);
+  font-size: 2rem;
+  text-align: center;
+  margin: 5rem 0 2rem 0;
+}
+main.contact form {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+}
+main.contact form input, main.contact form textarea {
+  border: 2px solid var(--thirdColor);
+  background-color: var(--firstColor);
+  border-radius: 0.5rem;
+  color: var(--secondColor);
+  padding: 0.5rem;
+  outline: var(--thirdColor);
+}
+main.contact form input {
+  height: 2.5rem;
+}
+main.contact form ::-moz-placeholder {
+  color: var(--secondColor);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+main.contact form ::placeholder {
+  color: var(--secondColor);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+main.contact form a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--secondColor);
+  background-color: var(--thirdColor);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+main.contact section.faq {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main.contact section.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+main.contact section.faq .line {
+  background-color: var(--thirdColor);
+  height: 1px;
+  width: 70%;
+  margin-bottom: 1.5rem;
+}
+main.contact section.faq p {
+  color: var(--secondColor);
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main.contact section.faq p i {
+  color: var(--thirdColor);
+  transition: 1s all;
+}
+main.contact section.faq .paragraphesVolet {
+  width: 70%;
+  margin: 0 auto;
+  color: var(--thirdColor);
+  text-align: center;
+  margin-bottom: 1rem;
+  display: none;
+}
+main.contact section.faq .questions {
+  cursor: pointer;
+}
 
 footer {
   color: var(--secondColor);
@@ -631,6 +715,25 @@ footer nav a:hover {
   }
   main.portfolio section a {
     font-size: 0.8rem;
+  }
+  main.contact {
+    margin-top: 20vh;
+  }
+  main.contact .infosContact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  main.contact form {
+    width: 100%;
+    margin-top: 0;
+  }
+  main.contact section.faq {
+    margin-top: 2rem;
+  }
+  main.contact section.faq .paragraphesVolet {
+    width: 100%;
   }
   footer nav a img {
     width: 80%;
