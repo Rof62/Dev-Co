@@ -802,6 +802,12 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
+        .icone{
+            img{
+                height: 2.5rem;
+            }
+           
+        }
     }
     form{
         width: 100%;
