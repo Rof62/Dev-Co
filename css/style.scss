@@ -158,27 +158,58 @@ main.index {
     }
 }
 // Main - Prestations page
-.prestations {
-    margin-top: 15%;
-    display: flex;
-    flex-direction: column;
+main.prestations {
+    margin-top: 5%;
     gap: 4rem;
+    h2 {
+        text-align: center;
+    }
+    .voirPlus4{
+        display: none;
+        color: #2c8ec7;
+        font-size: 0.8rem; 
+        font-style: italic;
+    }
+    .voirPlus5{
+        display: none;
+        color: #2c8ec7;
+        font-size: 0.8rem; 
+        font-style: italic;
+    }
+    .voirPlus6{
+        display: none;
+        color: #2c8ec7;
+        font-size: 0.8rem; 
+        font-style: italic;
+    }
+    .voirPlus7{
+        display: none;
+        color: #2c8ec7;
+        font-size: 0.8rem; 
+        font-style: italic;
+    }
+    h2{
+        color: var(--secondColor);
+        width: 100%;
+        margin: 5% auto;
+        text-decoration: underline;
+        text-decoration-color: var(--thirdColor) ;
+    }
     section {
         color: var(--secondColor);
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        overflow-x: hidden;
+        overflow: hidden;
         h2 {
             font-size: 2rem;    
-            text-align: center; 
+            text-align: center;
         }
         img{
             border-radius: 1.5rem;
-            width: 100%;
         }
         a {
             text-transform: uppercase;
@@ -203,35 +234,80 @@ main.index {
             width: 45%;
         }
             .devApp1 {
-                transform: translateX(-5rem);
-                transition: 1.3s;
+                transform: translateX(-55rem);
+                transition: 1.5s;
             }
             .devApp2 {
-                transform: translateX(5rem);
-                transition: 1.3s;
+                transform: translateX(55rem);
+                transition: 1.5s;
             }
-
+            .webDesign1 {
+                transform: translateX(-55rem);
+                transition: 1.5s;
+            }
+            .webDesign2 {
+                transform: translateX(55rem);
+                transition: 1.5s;
+            }
+            .NFT1 {
+                transform: translateX(-55rem);
+                transition: 1.5s;
+            }
+            .NFT2 {
+                transform: translateX(55rem);
+                transition: 1.5s;
+            }
     }
     .clients {
-        h2{
-            border-bottom: 2px solid var(--thirdColor);
-            width: max-content;
-            margin: 5% auto;
+        height: 300px;
+        margin: auto;
+        position: relative;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        &::before,&::after {
+            background: linear-gradient(to right, rgba(0,0,0,1)0%,rgba(255,255,255,0)100%);
+            content: "";
+            height: 100%;
+            position: absolute;
+            width: 15%;
+            z-index: 2;
+            pointer-events: none;
+        }
+        &::before {
+            left: 0;
+            top: 0;
+        }
+        &::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
         }
         .bloc{
             display: flex;
-            gap: 2.5rem;
+            width: calc(400px*8);
+            animation: scroll 20s linear infinite;
+            gap: 1rem;
+            &:hover {
+                animation-play-state: paused;
+            }
             .commentaire {
-                border: 0.1rem solid #2c8ec7;;
+                perspective: 100px;
+                height: 250px;
+                min-width: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 15px;
+                border: 0.1rem solid #2c8ec7;
                 border-radius: 1.5rem;
-                padding: 0.8rem;
-                width: 50%;
-                margin: 0 auto;
                 font-family: Arial, sans-serif;
                 transition: .5s all;
                 animation: neon 3s infinite linear;
-                &:hover{
+                will-change: transform;
+                &:hover {
                     transform: scale(1.1);
+                    margin: 0 0.5rem;
                 }
                 .auteur {
                     font-weight: bold;
@@ -241,6 +317,9 @@ main.index {
                     display: inline-block;
                     color: gold;
                 }
+                :nth-child(4) {
+                    font-size: 0.7rem;
+                }
                 .photo {
                     width: 3rem;
                     height: 3rem;
@@ -248,6 +327,7 @@ main.index {
                     overflow: hidden;
                     float: left;
                     margin-right: 0.8rem;
+                    margin-bottom: 0.5rem;
                     img {
                         width: 100%;
                         height: 100%;
@@ -274,7 +354,13 @@ main.portfolio{
                 width: 50%;
                 text-align: center; 
                 align-items: center;
-                
+                overflow: hidden;
+                // .voirPlus{
+                //     display: none;
+                //     color: #2c8ec7;
+                //     font-size: 0.8rem; 
+                //     font-style: italic;   
+                // }
                 h2, p{
                     color: var(--secondColor);
                 }
@@ -323,7 +409,7 @@ main.portfolio{
                 .iconify2{
                     margin-top: 5%;
                     font-size: 2.5rem; 
-                    transform: translateX(-250%);
+                    transform: translateX(150%);
                     }
                     .iconify2.moved{
                         transform: translateX(0);
@@ -352,18 +438,19 @@ main.portfolio{
                 transform: scale(1.1);
             }
         }
-    }    
-    .anime{
-        margin-top: 10%;
-        align-items: center;
+    } 
+    .video1{
         display: flex;
         justify-content: center;
-        .globe{
-            animation: globe 10s infinite linear;
-            width: 15%;
-            margin: 0 auto;
-        } 
-    } 
+        align-items: center;
+        margin: 0;
+        margin-top: 3rem;
+        video{
+            width: 80%;  
+            
+        }  
+    }   
+    
 }
 // Variables parameters carrousel
 $n: 8;
@@ -426,7 +513,7 @@ $apothem: 482.842712474619px;
                 transform: scale(1.1);
             }
 		}
-	} 
+	}   
 }
 //  Main - Contact
 main.contact{
@@ -624,7 +711,17 @@ footer {
     }
 }
 
-// Keyframs Page Portfolio
+// Keyframes Page Prestation
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-420.6px*4));
+    }
+}
+
+// Keyframes Page Portfolio
 @keyframes globe {
     0% {
         transform: translateX(0) rotate(0);
@@ -735,19 +832,103 @@ footer {
 
     // Media Queries Page Prestations
     main.prestations {
-        h2 {
-            font-size: 1.5rem;
+        section {
+            gap: 1rem;
+            h2 {
+                font-size: 1.5rem;
+            }
+        }    
+    
+        .voirPlus4{
+            display: inline;
+            color: #2c8ec7;
+            font-size: 0.8rem; 
+            font-style: italic;
+            cursor: pointer;
         }
-
+        .voirPlus5{
+            display: inline;
+            color: #2c8ec7;
+            font-size: 0.8rem; 
+            font-style: italic;
+            cursor: pointer;
+        }
+        .voirPlus6{
+            display: inline;
+            color: #2c8ec7;
+            font-size: 0.8rem; 
+            font-style: italic;
+            cursor: pointer;
+        }
+        .voirPlus7{
+            display: inline;
+            color: #2c8ec7;
+            font-size: 0.8rem; 
+            font-style: italic;
+            cursor: pointer;
+        }
+        .ajoutText4 span{
+            display: none;
+        }
+        .ajoutText5 span{
+            display: none;
+        }
+        .ajoutText6 span{
+            display: none;
+        }
+        .ajoutText7 span{
+            display: none;
+        }
+    
         a {
             font-size: 0.8rem;
         }
-
+        .imgDevWeb {
+            :nth-child(1) {
+                width: 90%;
+                margin: 0 auto;
+            }
+            :nth-child(2) {
+                display: none;
+            }
+        }
+        .imgDevApp {
+            :nth-child(1) {
+                width: 90%;
+                margin: 0 auto;
+                transform: translateX(0);
+            }
+            :nth-child(2) {
+                display: none;
+            }
+        }
+        .imgWebDesign {
+            :nth-child(1) {
+                width: 90%;
+                margin: 0 auto;
+                transform: translateX(0);
+            }
+            :nth-child(2) {
+                display: none;
+            }
+        }
+        .imgNft {
+            :nth-child(1) {
+                width: 90%;
+                margin: 0 auto;
+                transform: translateX(0);
+            }
+            :nth-child(2) {
+                display: none;
+            }
+        }
         .clients .bloc {
-            flex-direction: column;
+            flex-direction: row;
+            width: calc(200px*4);
+            animation: scroll 40s linear infinite;
 
             .commentaire {
-                width: 80%;
+                min-width: 200px;
             }
         }
     }
@@ -759,16 +940,50 @@ footer {
 
             .textAndCarousel {
                 flex-direction: column;
-
+                
                 .text {
                     width: 90%;
-
+                    .ajoutText span{
+                        display: none;
+                    }
+                    .ajoutText2 span{
+                        display: none;
+                    }
+                    .ajoutText3 span{
+                        display: none;
+                    }
+                    .voirPlus{
+                        display: inline;
+                        color: #2c8ec7;
+                        font-size: 0.8rem; 
+                        font-style: italic; 
+                        cursor: pointer;  
+                    }
+                    .voirPlus2{
+                        display: inline;
+                        color: #2c8ec7;
+                        font-size: 0.8rem; 
+                        font-style: italic; 
+                        cursor: pointer;  
+                    }
+                    .voirPlus3{
+                        display: inline;
+                        color: #2c8ec7;
+                        font-size: 0.8rem; 
+                        font-style: italic;
+                        cursor: pointer;   
+                    }
                     h2 {
                         font-size: 1.5rem;
                     }
 
                     .iconify {
                         font-size: 25px;
+                    }
+                }
+                .video1{
+                    video{
+                        width: 80%;
                     }
                 }
 
@@ -797,6 +1012,8 @@ footer {
     // Media Queries Page Contact
    main.contact{
     margin-top: 20vh;
+    h2{
+        font-size: 1.5rem}
     .infosContact{
         display: flex;
         flex-direction: column;

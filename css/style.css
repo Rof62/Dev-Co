@@ -135,31 +135,62 @@ main.index section.reverse {
   flex-direction: row-reverse;
 }
 
-.prestations {
-  margin-top: 15%;
-  display: flex;
-  flex-direction: column;
+main.prestations {
+  margin-top: 5%;
   gap: 4rem;
 }
-.prestations section {
+main.prestations h2 {
+  text-align: center;
+}
+main.prestations .voirPlus4 {
+  display: none;
+  color: #2c8ec7;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+main.prestations .voirPlus5 {
+  display: none;
+  color: #2c8ec7;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+main.prestations .voirPlus6 {
+  display: none;
+  color: #2c8ec7;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+main.prestations .voirPlus7 {
+  display: none;
+  color: #2c8ec7;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+main.prestations h2 {
   color: var(--secondColor);
-  width: 80%;
+  width: 100%;
+  margin: 5% auto;
+  text-decoration: underline;
+  text-decoration-color: var(--thirdColor);
+}
+main.prestations section {
+  color: var(--secondColor);
+  width: 100%;
   margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-.prestations section h2 {
+main.prestations section h2 {
   font-size: 2rem;
   text-align: center;
 }
-.prestations section img {
+main.prestations section img {
   border-radius: 1.5rem;
-  width: 100%;
 }
-.prestations section a {
+main.prestations section a {
   text-transform: uppercase;
   color: var(--secondColor);
   background-color: var(--thirdColor);
@@ -172,64 +203,115 @@ main.index section.reverse {
   justify-self: center;
   animation: neon 3s infinite linear;
 }
-.prestations section a:hover {
+main.prestations section a:hover {
   transform: scale(1.1);
 }
-.prestations section .position {
+main.prestations section .position {
   display: flex;
   justify-content: space-between;
 }
-.prestations section .taille {
+main.prestations section .taille {
   width: 45%;
 }
-.prestations section .devApp1 {
-  transform: translateX(-5rem);
-  transition: 1.3s;
+main.prestations section .devApp1 {
+  transform: translateX(-55rem);
+  transition: 1.5s;
 }
-.prestations section .devApp2 {
-  transform: translateX(5rem);
-  transition: 1.3s;
+main.prestations section .devApp2 {
+  transform: translateX(55rem);
+  transition: 1.5s;
 }
-.prestations .clients h2 {
-  border-bottom: 2px solid var(--thirdColor);
-  width: -moz-max-content;
-  width: max-content;
-  margin: 5% auto;
+main.prestations section .webDesign1 {
+  transform: translateX(-55rem);
+  transition: 1.5s;
 }
-.prestations .clients .bloc {
+main.prestations section .webDesign2 {
+  transform: translateX(55rem);
+  transition: 1.5s;
+}
+main.prestations section .NFT1 {
+  transform: translateX(-55rem);
+  transition: 1.5s;
+}
+main.prestations section .NFT2 {
+  transform: translateX(55rem);
+  transition: 1.5s;
+}
+main.prestations .clients {
+  height: 300px;
+  margin: auto;
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+main.prestations .clients::before, main.prestations .clients::after {
+  background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+  pointer-events: none;
+}
+main.prestations .clients::before {
+  left: 0;
+  top: 0;
+}
+main.prestations .clients::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+main.prestations .clients .bloc {
   display: flex;
-  gap: 2.5rem;
+  width: 3200px;
+  animation: scroll 20s linear infinite;
+  gap: 1rem;
 }
-.prestations .clients .bloc .commentaire {
+main.prestations .clients .bloc:hover {
+  animation-play-state: paused;
+}
+main.prestations .clients .bloc .commentaire {
+  perspective: 100px;
+  height: 250px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
   border: 0.1rem solid #2c8ec7;
   border-radius: 1.5rem;
-  padding: 0.8rem;
-  width: 50%;
-  margin: 0 auto;
   font-family: Arial, sans-serif;
   transition: 0.5s all;
   animation: neon 3s infinite linear;
+  will-change: transform;
 }
-.prestations .clients .bloc .commentaire:hover {
+main.prestations .clients .bloc .commentaire:hover {
   transform: scale(1.1);
+  margin: 0 0.5rem;
 }
-.prestations .clients .bloc .commentaire .auteur {
+main.prestations .clients .bloc .commentaire .auteur {
   font-weight: bold;
   margin-bottom: 0.2rem;
 }
-.prestations .clients .bloc .commentaire .note {
+main.prestations .clients .bloc .commentaire .note {
   display: inline-block;
   color: gold;
 }
-.prestations .clients .bloc .commentaire .photo {
+main.prestations .clients .bloc .commentaire :nth-child(4) {
+  font-size: 0.7rem;
+}
+main.prestations .clients .bloc .commentaire .photo {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
   overflow: hidden;
   float: left;
   margin-right: 0.8rem;
+  margin-bottom: 0.5rem;
 }
-.prestations .clients .bloc .commentaire .photo img {
+main.prestations .clients .bloc .commentaire .photo img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -252,6 +334,7 @@ main.portfolio section .textAndCarousel .text {
   width: 50%;
   text-align: center;
   align-items: center;
+  overflow: hidden;
 }
 main.portfolio section .textAndCarousel .text h2, main.portfolio section .textAndCarousel .text p {
   color: var(--secondColor);
@@ -301,7 +384,7 @@ main.portfolio section .textAndCarousel .text .iconify1.moved {
 main.portfolio section .textAndCarousel .text .iconify2 {
   margin-top: 5%;
   font-size: 2.5rem;
-  transform: translateX(-250%);
+  transform: translateX(150%);
 }
 main.portfolio section .textAndCarousel .text .iconify2.moved {
   transform: translateX(0);
@@ -329,16 +412,15 @@ main.portfolio section a {
 main.portfolio section a:hover {
   transform: scale(1.1);
 }
-main.portfolio .anime {
-  margin-top: 10%;
-  align-items: center;
+main.portfolio .video1 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 3rem;
 }
-main.portfolio .anime .globe {
-  animation: globe 10s infinite linear;
-  width: 15%;
-  margin: 0 auto;
+main.portfolio .video1 video {
+  width: 80%;
 }
 
 .carousel {
@@ -599,6 +681,14 @@ footer nav a:hover {
     filter: drop-shadow(0 0 0 0rem);
   }
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1682.4px);
+  }
+}
 @keyframes globe {
   0% {
     transform: translateX(0) rotate(0);
@@ -680,17 +770,93 @@ footer nav a:hover {
   main.index section.reverse .text a {
     font-size: 0.8rem;
   }
-  main.prestations h2 {
+  main.prestations section {
+    gap: 1rem;
+  }
+  main.prestations section h2 {
     font-size: 1.5rem;
+  }
+  main.prestations .voirPlus4 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.prestations .voirPlus5 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.prestations .voirPlus6 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.prestations .voirPlus7 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.prestations .ajoutText4 span {
+    display: none;
+  }
+  main.prestations .ajoutText5 span {
+    display: none;
+  }
+  main.prestations .ajoutText6 span {
+    display: none;
+  }
+  main.prestations .ajoutText7 span {
+    display: none;
   }
   main.prestations a {
     font-size: 0.8rem;
   }
+  main.prestations .imgDevWeb :nth-child(1) {
+    width: 90%;
+    margin: 0 auto;
+  }
+  main.prestations .imgDevWeb :nth-child(2) {
+    display: none;
+  }
+  main.prestations .imgDevApp :nth-child(1) {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateX(0);
+  }
+  main.prestations .imgDevApp :nth-child(2) {
+    display: none;
+  }
+  main.prestations .imgWebDesign :nth-child(1) {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateX(0);
+  }
+  main.prestations .imgWebDesign :nth-child(2) {
+    display: none;
+  }
+  main.prestations .imgNft :nth-child(1) {
+    width: 90%;
+    margin: 0 auto;
+    transform: translateX(0);
+  }
+  main.prestations .imgNft :nth-child(2) {
+    display: none;
+  }
   main.prestations .clients .bloc {
-    flex-direction: column;
+    flex-direction: row;
+    width: 800px;
+    animation: scroll 40s linear infinite;
   }
   main.prestations .clients .bloc .commentaire {
-    width: 80%;
+    min-width: 200px;
   }
   main.portfolio section {
     flex-direction: column;
@@ -701,11 +867,44 @@ footer nav a:hover {
   main.portfolio section .textAndCarousel .text {
     width: 90%;
   }
+  main.portfolio section .textAndCarousel .text .ajoutText span {
+    display: none;
+  }
+  main.portfolio section .textAndCarousel .text .ajoutText2 span {
+    display: none;
+  }
+  main.portfolio section .textAndCarousel .text .ajoutText3 span {
+    display: none;
+  }
+  main.portfolio section .textAndCarousel .text .voirPlus {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.portfolio section .textAndCarousel .text .voirPlus2 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.portfolio section .textAndCarousel .text .voirPlus3 {
+    display: inline;
+    color: #2c8ec7;
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
   main.portfolio section .textAndCarousel .text h2 {
     font-size: 1.5rem;
   }
   main.portfolio section .textAndCarousel .text .iconify {
     font-size: 25px;
+  }
+  main.portfolio section .textAndCarousel .video1 video {
+    width: 80%;
   }
   main.portfolio section .textAndCarousel .carousel {
     width: 100%;
@@ -722,6 +921,9 @@ footer nav a:hover {
   }
   main.contact {
     margin-top: 20vh;
+  }
+  main.contact h2 {
+    font-size: 1.5rem;
   }
   main.contact .infosContact {
     display: flex;
