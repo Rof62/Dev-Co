@@ -689,6 +689,14 @@ footer nav a:hover {
     transform: translateX(-1682.4px);
   }
 }
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-864px);
+  }
+}
 @keyframes globe {
   0% {
     transform: translateX(0) rotate(0);
@@ -853,7 +861,7 @@ footer nav a:hover {
   main.prestations .clients .bloc {
     flex-direction: row;
     width: 800px;
-    animation: scroll 40s linear infinite;
+    animation: scroll2 20s linear infinite;
   }
   main.prestations .clients .bloc .commentaire {
     min-width: 200px;

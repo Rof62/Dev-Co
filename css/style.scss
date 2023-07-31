@@ -720,6 +720,14 @@ footer {
         transform: translateX(calc(-420.6px*4));
     }
 }
+@keyframes scroll2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-216px*4));
+    }
+}
 
 // Keyframes Page Portfolio
 @keyframes globe {
@@ -925,7 +933,7 @@ footer {
         .clients .bloc {
             flex-direction: row;
             width: calc(200px*4);
-            animation: scroll 40s linear infinite;
+            animation: scroll2 20s linear infinite;
 
             .commentaire {
                 min-width: 200px;
