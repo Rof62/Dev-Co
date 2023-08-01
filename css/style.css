@@ -279,7 +279,7 @@ main.prestations .clients .bloc .commentaire {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  border: 0.1rem solid #2c8ec7;
+  border: 0.1rem solid var(--thirdColor);
   border-radius: 1.5rem;
   font-family: Arial, sans-serif;
   transition: 0.5s all;
