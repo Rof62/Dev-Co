@@ -45,7 +45,7 @@ header nav {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  width: 50%;
+  width: 40rem;
   margin: 0 auto;
   padding: 0.5rem 0;
   margin-top: 2rem;
@@ -54,12 +54,79 @@ header nav {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
   box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-}
-header nav .menu {
-  display: none;
+  font-family: aladin, sans-serif;
 }
 header nav .logo {
   margin: 0 1rem;
+}
+header nav .menu {
+  color: var(--secondColor);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+header nav .menu:hover {
+  transform: scale(1.2);
+}
+header nav .connexion {
+  background-color: var(--firstColor);
+  border: 3px solid var(--thirdColor);
+  color: var(--secondColor);
+  font-family: aladin, sans-serif;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+header nav .connexion:hover {
+  transform: scale(1.1);
+}
+header nav .blocIcones {
+  display: flex;
+  gap: 1rem;
+}
+header nav .blocIcones button {
+  border: 0;
+  cursor: pointer;
+  transition: 0.5s all;
+  background-color: transparent;
+}
+header nav .blocIcones button:hover {
+  transform: scale(1.2);
+}
+header nav .blocIcones button i {
+  color: var(--secondColor);
+  font-size: 2rem;
+}
+header nav ul {
+  position: absolute;
+  top: 5rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  transform: translateX(-100rem);
+  transition: 1s all;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--thirdColor);
+  background-color: rgba(0, 0, 0, 0.9019607843);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
+}
+header nav ul li a {
+  color: var(--thirdColor);
+  font-size: 1.2rem;
+}
+header nav ul button {
+  display: none;
 }
 header nav a {
   color: var(--secondColor);
@@ -73,21 +140,11 @@ header nav a:hover {
 header nav a span {
   color: var(--thirdColor);
 }
-header nav i {
-  color: var(--secondColor);
-  font-size: 2rem;
-  opacity: 0.6;
-}
-header nav ul {
-  font-size: 0;
-  display: flex;
-  gap: 2rem;
-}
-header nav ul li a {
-  font-size: 1.2rem;
-}
-header nav ul li a:hover {
+header .active .menu p {
   color: var(--thirdColor);
+}
+header .active ul {
+  transform: translateX(0);
 }
 
 main.index section {
@@ -707,57 +764,31 @@ footer nav a:hover {
     transform: translateX(-40vw) rotate(-720deg);
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 850px) {
   html {
     font-size: 16px;
   }
   header nav {
-    min-width: 10rem;
-  }
-  header nav a {
-    font-size: 1.2rem;
-  }
-  header nav ul {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-10rem);
-    transition: 1s all;
-    width: -moz-max-content;
-    width: max-content;
-    border-radius: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid var(--thirdColor);
-    background-color: rgba(0, 0, 0, 0.9019607843);
-    -webkit-backdrop-filter: blur(0.5rem);
-            backdrop-filter: blur(0.5rem);
-    box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-  }
-  header nav ul li a {
-    color: var(--thirdColor);
-    font-size: 1.2rem;
+    width: 90%;
   }
   header nav .menu {
+    font-size: 1.5rem;
+  }
+  header nav .connexion {
+    display: none;
+  }
+  header nav .blocIcones button img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  header nav ul {
+    transform: translateY(-50rem);
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  header nav ul .connexion {
     display: block;
-  }
-  header nav .menu p {
-    color: var(--secondColor);
-    font-family: aladin, sans-serif;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.5s all;
-  }
-  header nav .menu p:hover {
-    transform: scale(1.2);
-  }
-  header .active .menu p {
-    color: var(--thirdColor);
-  }
-  header .active ul {
-    transform: translateY(7.5rem);
+    padding: 0.2rem 0.5rem;
   }
   main.index section,
   main.index section.reverse {

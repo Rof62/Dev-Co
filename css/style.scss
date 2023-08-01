@@ -48,7 +48,7 @@ header {
         justify-content: space-around;
         align-items: center;
         position: fixed;
-        width: 50%;
+        width: 40rem;
         margin: 0 auto;
         padding: 0.5rem 0;
         margin-top: 2rem;
@@ -56,15 +56,82 @@ header {
         background-color: var(--fourthColor);
         backdrop-filter: blur(0.5rem);
         box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-
-        .menu {
-            display: none;
-        }
-
+        font-family: aladin,sans-serif;
         .logo {
             margin: 0 1rem;
         }
+        .menu {
+            color: var(--secondColor);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: .5s all;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        .connexion{
+            background-color: var(--firstColor);
+            border: 3px solid var(--thirdColor);
+            color: var(--secondColor);
+            font-family: aladin,sans-serif;
+            padding: 0.5rem;
+            // border: 0;
+            border-radius: 1.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: .5s all;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .blocIcones{
+            display: flex;
+            gap: 1rem;
+            button{
+                border: 0;
+                cursor: pointer;
+                transition: .5s all;
+                background-color: transparent;
+                &:hover{
+                    transform: scale(1.2);
+                }
+                i{
+                 color: var(--secondColor);
+                 font-size: 2rem
+                };
+            }
+            
+        }
+        ul {
+            position: absolute;
+            top:5rem;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            transform: translateX(-100rem);
+            transition: 1s all;
+            width: max-content;
+            margin: 0 auto;
+            border-radius: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--thirdColor);
+            background-color: #000000e6;
+            backdrop-filter: blur(0.5rem);
+            box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
 
+            li {
+                a {
+                    color: var(--thirdColor);
+                    font-size: 1.2rem;
+                }
+            }
+            button{
+                display: none;
+            }
+        }
         a {
             color: var(--secondColor);
             font-size: 2rem;
@@ -79,27 +146,16 @@ header {
                 color: var(--thirdColor);
             }
         }
-
-        i {
-            color: var(--secondColor);
-            font-size: 2rem;
-            opacity: 0.6;
+    }
+    .active {
+        .menu {
+            p {
+                color: var(--thirdColor);
+            }
         }
 
         ul {
-            font-size: 0;
-            display: flex;
-            gap: 2rem;
-
-            li {
-                a {
-                    font-size: 1.2rem;
-
-                    &:hover {
-                        color: var(--thirdColor);
-                    }
-                }
-            }
+            transform: translateX(0);
         }
     }
 }
@@ -744,7 +800,7 @@ footer {
 }
 
 // Media queries page Index
-@media screen and (max-width:940px) {
+@media screen and (max-width:850px) {
 
     html {
         font-size: 16px
@@ -753,67 +809,33 @@ footer {
     // Header
     header {
         nav {
-            min-width: 10rem;
-
-            a {
-                font-size: 1.2rem;
+            width: 90%;
+            .menu{
+                font-size: 1.5rem;
             }
-
-            ul {
-                position: absolute;
-                z-index: 2;
-                display: flex;
+            .connexion{
+                display: none;
+            }
+            .blocIcones{
+                button{
+                    img{
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    };
+                }
+                
+            }
+            ul{
+                transform:translateY(-50rem) ;
                 flex-direction: column;
-                transform: translateY(-10rem);
-                transition: 1s all;
-                width: max-content;
-                border-radius: 1rem;
-                justify-content: center;
-                align-items: center;
-                padding: 1rem;
-                border: 1px solid var(--thirdColor);
-                background-color: #000000e6;
-                backdrop-filter: blur(0.5rem);
-                box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-
-                li {
-                    a {
-                        color: var(--thirdColor);
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-
-            .menu {
-                display: block;
-
-                p {
-                    color: var(--secondColor);
-                    font-family: aladin, sans-serif;
-                    font-size: 1.1rem;
-                    cursor: pointer;
-                    transition: .5s all;
-
-                    &:hover {
-                        transform: scale(1.2);
-                    }
+                gap: 0.3rem;
+                .connexion{
+                    display: block;
+                    padding: 0.2rem 0.5rem;
                 }
             }
         }
-
-        .active {
-            .menu {
-                p {
-                    color: var(--thirdColor);
-                }
-            }
-
-            ul {
-                transform: translateY(7.5rem);
-            }
-        }
-    }
-
+    }        
     // Main
     main.index {
 
