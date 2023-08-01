@@ -176,8 +176,10 @@ window.addEventListener("resize", tailleEcran)
  listeAvis.forEach(avis => {
     avis.addEventListener(`mouseover`, () =>{
         listeAvis.forEach(otheravis => {
-            if(otheravis !== avis) {
+            if(otheravis !== avis && largeurEcran > 940) {
                 otheravis.style.filter = `blur(5px)`;
+            }else {
+                otheravis.style.filter = "none";
             }
         });
     });

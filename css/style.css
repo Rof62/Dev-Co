@@ -170,7 +170,6 @@ main.prestations h2 {
   color: var(--secondColor);
   width: 100%;
   margin: 5% auto;
-  text-decoration: underline;
   text-decoration-color: var(--thirdColor);
 }
 main.prestations section {
@@ -863,8 +862,15 @@ footer nav a:hover {
     width: 800px;
     animation: scroll2 20s linear infinite;
   }
+  main.prestations .clients .bloc:hover {
+    animation-play-state: initial;
+  }
   main.prestations .clients .bloc .commentaire {
     min-width: 200px;
+  }
+  main.prestations .clients .bloc .commentaire:hover {
+    transform: none;
+    margin: 0;
   }
   main.portfolio section {
     flex-direction: column;

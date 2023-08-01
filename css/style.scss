@@ -192,7 +192,6 @@ main.prestations {
         color: var(--secondColor);
         width: 100%;
         margin: 5% auto;
-        text-decoration: underline;
         text-decoration-color: var(--thirdColor) ;
     }
     section {
@@ -934,9 +933,16 @@ footer {
             flex-direction: row;
             width: calc(200px*4);
             animation: scroll2 20s linear infinite;
+            &:hover {
+                animation-play-state:initial;
+            }
 
             .commentaire {
                 min-width: 200px;
+                &:hover {
+                    transform: none;
+                    margin: 0;
+                }
             }
         }
     }
