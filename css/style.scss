@@ -159,7 +159,44 @@ header {
         }
     }
 }
-
+ // Modal connexion
+ div.modalConnexion{
+    border: 3px solid var(--thirdColor);
+    border-radius: 1rem;
+    width: 25rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo{
+        color: var(--secondColor);
+        font-family: aladin,sans-serif;
+        font-size: 2rem;
+        margin: 2rem 0;
+        span{
+            color: var(--thirdColor);
+        }
+    }
+    input{
+        border: 1px solid var(--thirdColor);
+        background-color: var(--firstColor);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        width: 90%;
+        margin-bottom: 0.5rem;
+        outline: 0;
+    }
+    :nth-child(4){
+        color: var(--secondColor);
+        font-size: 0.6rem;
+        opacity: 0.5;
+        width: 90%;
+        text-align: right;
+        margin-bottom: 1rem;
+        justify-content: flex-end;
+    }
+}
 // Main - Index page
 main.index {
     section {
