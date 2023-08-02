@@ -2,7 +2,7 @@
 :root {
     --firstColor: #000000;
     --secondColor: #fff;
-    --thirdColor: #2c8ec7;
+    --thirdColor: #67b7e5;
     --fourthColor: ##000000e6;
 }
 
@@ -160,7 +160,29 @@ header {
     }
 }
  // Modal connexion
- div.modalConnexion{
+ .flip-card {
+    width: 30rem;
+    height: 32rem;
+    perspective: 1000px;
+    font-family: Roboto,sans-serif;
+    margin: 0 auto;
+    visibility: hidden;
+    justify-content: center;
+    position: fixed;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .5s ;
+    z-index: 2; 
+    
+  }  
+  .flip-card-inner {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
     border: 3px solid var(--thirdColor);
     border-radius: 1rem;
     width: 25rem;
@@ -169,34 +191,145 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .logo{
-        color: var(--secondColor);
-        font-family: aladin,sans-serif;
-        font-size: 2rem;
-        margin: 2rem 0;
-        span{
-            color: var(--thirdColor);
+    padding: 1rem 0;
+        .logo{
+            color: var(--secondColor);
+            font-family: aladin,sans-serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            span{
+                color: var(--thirdColor);
+            }
+        }
+        input{
+            border: 3px solid var(--thirdColor);
+            background-color: var(--firstColor);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            width: 90%;
+            color: var(--secondColor);
+            margin-bottom: 0.5rem;
+            outline: 0;
+        }
+        :nth-child(4){
+            color: var(--secondColor);
+            font-size: 0.6rem;
+            opacity: 0.5;
+            width: 90%;
+            text-align: right;
+            margin-bottom: 1rem;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+        :nth-child(5){
+            background-color: var(--thirdColor);
+            color: var(--secondColor);
+            border: none;
+        }
+        :nth-child(6){
+            border: 3px solid var(--secondColor);
+            background-color: var(--firstColor);
+            color: var(--secondColor);
+        }
+        .separation{
+            display: flex;
+            color: var(--secondColor);
+            align-items: center;
+            width: 90%;
+            gap: 1rem;
+            margin: 1rem 0;
+            .line{
+                background-color: var(--thirdColor);
+                width: 70%;
+                height: 1px;
+            }
+        }
+        :nth-child(8){
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--firstColor);
+            border: 3px solid var(--secondColor);
+            color: var(--secondColor);
+            img{
+                width: 1rem;
+                height: 1rem;   
+            }
+        }
+        button{
+           border: 0;
+            width: 90%;
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem;
+            font-weight: bold;
+            font-size: 0.8rem;
+            cursor: pointer;
         }
     }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: var(--secondColor);
+    background-color: var(--firstColor);
+    border-radius: 1rem;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
     input{
-        border: 1px solid var(--thirdColor);
-        background-color: var(--firstColor);
-        border-radius: 0.5rem;
-        padding: 0.5rem;
-        width: 90%;
-        margin-bottom: 0.5rem;
-        outline: 0;
+        border: 3px solid var(--thirdColor);
     }
-    :nth-child(4){
-        color: var(--secondColor);
-        font-size: 0.6rem;
-        opacity: 0.5;
+    .nomPrenom{
         width: 90%;
-        text-align: right;
-        margin-bottom: 1rem;
-        justify-content: flex-end;
+        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    input[type=tel]{
+        text-align: left;
+        opacity: 1;
+        &::placeholder{
+            color: var(--secondColor);
+            opacity: .4;
+            font-size: .65rem;
+        }
+    }
+    .mailUsername{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        gap: 1rem;
+        background-color: var(--firstColor);
+    }
+    input[type=password]{
+        border-color: var(--thirdColor);
+    }
+    .already{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin: 1rem 0;
+        .line{
+            width: 6rem;
+            height: 1px;
+            background-color: var(--thirdColor);
+        }
+    }
+    .connexionBtn{
+        background-color: var(--thirdColor);
+        color: var(--secondColor);
     }
 }
+
 // Main - Index page
 main.index {
     section {
@@ -840,7 +973,7 @@ footer {
 @media screen and (max-width:850px) {
 
     html {
-        font-size: 16px
+        font-size: 14px
     }
 
     // Header
@@ -872,7 +1005,23 @@ footer {
                 }
             }
         }
-    }        
+    }   
+    // Modal connexion
+    .flip-card{
+        width: 30rem;
+        top: 40%;
+        input{
+            &::placeholder{
+                font-size: 0.8rem;
+            }
+        }
+        input[type=tel]{
+            &::placeholder{
+                font-size: .8rem;
+            }
+        }
+       
+    }  
     // Main
     main.index {
 
