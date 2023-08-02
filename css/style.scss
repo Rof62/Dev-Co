@@ -161,7 +161,7 @@ header {
 }
  // Modal connexion
  .flip-card {
-    width: 30rem;
+    width: 28rem;
     height: 32rem;
     perspective: 1000px;
     font-family: Roboto,sans-serif;
@@ -173,7 +173,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .5s ;
-    z-index: 2; 
+    z-index: 20; 
     
   }  
   .flip-card-inner {
@@ -297,6 +297,7 @@ header {
     input[type=tel]{
         text-align: left;
         opacity: 1;
+        cursor:initial;
         &::placeholder{
             color: var(--secondColor);
             opacity: .4;
@@ -1008,8 +1009,9 @@ footer {
     }   
     // Modal connexion
     .flip-card{
-        width: 30rem;
+        width: 25rem;
         top: 40%;
+        z-index: 20;
         input{
             &::placeholder{
                 font-size: 0.8rem;

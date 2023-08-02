@@ -148,7 +148,7 @@ header .active ul {
 }
 
 .flip-card {
-  width: 30rem;
+  width: 28rem;
   height: 32rem;
   perspective: 1000px;
   font-family: Roboto, sans-serif;
@@ -160,7 +160,7 @@ header .active ul {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.5s;
-  z-index: 2;
+  z-index: 20;
 }
 
 .flip-card-inner {
@@ -286,6 +286,7 @@ header .active ul {
 .flip-card-back input[type=tel] {
   text-align: left;
   opacity: 1;
+  cursor: initial;
 }
 .flip-card-back input[type=tel]::-moz-placeholder {
   color: var(--secondColor);
@@ -967,8 +968,9 @@ footer nav a:hover {
     padding: 0.2rem 0.5rem;
   }
   .flip-card {
-    width: 30rem;
+    width: 25rem;
     top: 40%;
+    z-index: 20;
   }
   .flip-card input::-moz-placeholder {
     font-size: 0.8rem;
