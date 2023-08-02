@@ -37,11 +37,52 @@
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="formations.html">Formations</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <button class="connexion">Connexion/Inscription</button>
+                <button class="connexion" id="connexionResponsive">Connexion/Inscription</button>
             </ul>
             
         </nav>
     </header>
+    <!--Modal-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <p class="logo">Dev<span>&</span>Co</p>
+                <input type="email" placeholder="Votre Email">
+                <input type="password" placeholder="Votre mot de passe">
+                <p>Mot de passe oublié ?</p>
+                <button class="seConnecter">Se connecter</button>
+                <button class="sinscrire">S'inscrire</button>
+                <div class="separation">
+                    <div class="line"></div>
+                    <p>OU</p>
+                    <div class="line"></div>
+                </div>
+                <button class="inscriptionGoogle"><img src="../img/google.png" alt="">S'inscrire avec Google</button>
+            </div>
+            <div class="flip-card-back">
+                <p class="logo">Dev<span>&</span>Co</p>
+                <div class="nomPrenom">
+                    <input type="text" placeholder="Votre nom">
+                    <input type="text" placeholder="Votre prénom">
+                </div>
+                <input type="text" placeholder="Votre adresse">
+                <input type="tel" minlength="10" maxlength="10" placeholder="Votre numéro de téléphone">
+                <div class="mailUsername">
+                    <input type="email" placeholder="Votre Email">
+                    <input type="text" placeholder="Votre nom d'utilisateur">
+                </div>
+                <input type="password" placeholder="Votre mot de passe">
+                <input type="password" placeholder="Confirmez votre mot de passe">
+                <button>S'inscrire</button>
+                <div class="already">
+                    <div class="line"></div>
+                    <p>J'ai déja un compte</p>
+                    <div class="line"></div>
+                </div>
+                <button class="connexionBtn">Se connecter</button>
+            </div>
+        </div>
+    </div>
     <!-- Main -->
     <main class="portfolio center">
         <section>

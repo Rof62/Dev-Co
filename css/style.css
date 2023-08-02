@@ -148,7 +148,7 @@ header .active ul {
 }
 
 .flip-card {
-  width: 28rem;
+  width: 25rem;
   height: 32rem;
   perspective: 1000px;
   font-family: Roboto, sans-serif;
