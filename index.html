@@ -6,9 +6,9 @@
     <!-- Title -->
     <title>Dev&Co - Accueil</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- JS -->
-    <script src="../js/index.js" defer></script>
+    <script src="js/index.js" defer></script>
     <script src="https://kit.fontawesome.com/d15ae6a2f3.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,20 +26,20 @@
             </div>
             <button class="connexion">Connexion/Inscription</button>
             <div class="blocIcones">
-                <button class="gestion"><a href="../html/gestionProfil.html"><img src="../img/connexion.svg" alt=""></a></button>
-                <button><img src="../img/panier.svg" alt=""></button> 
+                <button class="gestion"><a href="html/gestionProfil.html"><img src="img/connexion.svg" alt=""></a></button>
+                <button class="panier"><img src="img/panier.svg" alt=""></button> 
             </div>
             <ul> 
-                <li><a href="prestations.html">Prestations</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="formations.html">Formations</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="html/prestations.html">Prestations</a></li>
+                <li><a href="html/portfolio.html">Portfolio</a></li>
+                <li><a href="html/formations.html">Formations</a></li>
+                <li><a href="html/contact.html">Contact</a></li>
                 <button class="connexion" id="connexionResponsive">Connexion/Inscription</button>
             </ul>
             
         </nav>
     </header>
-    <!--Modal-->
+    <!--Modal connexion-->
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -54,7 +54,7 @@
                     <p>OU</p>
                     <div class="line"></div>
                 </div>
-                <button class="inscriptionGoogle"><img src="../img/google.png" alt="">S'inscrire avec Google</button>
+                <button class="inscriptionGoogle"><img src="img/google.png" alt="">S'inscrire avec Google</button>
             </div>
             <div class="flip-card-back">
                 <p class="logo">Dev<span>&</span>Co</p>
@@ -80,6 +80,23 @@
             </div>
         </div>
     </div>
+    <!-- Modal Panier -->
+    <div class="panierAchat">
+        <i class="fa-solid fa-xmark closePanier"></i>
+        <p class="logo">Dev<span>&</span>Co</p>
+        <h2>Votre panier</h2>
+        <input type="text" placeholder="Vous avez un code promo ?">
+        <div class="detail">
+            <div class="categories">
+                <p>Formation</p>
+                <p>Prix</p>
+            </div>
+            <div class="articles">
+            </div>
+        </div>
+        <button>Commander</button>
+        <button>Continuer vos achats</button>
+    </div>
     
     
     <!-- Main -->
@@ -91,7 +108,7 @@
                 <a href="prestations.html">DÉCOUVRIR NOS PRESTATIONS</a>
             </div>
             <div class="image">
-                <img src="../img/img1.svg" alt="icone flottante">    
+                <img src="img/img1.svg" alt="icone flottante">    
             </div>
         </section>
         <section class="reverse">
@@ -101,7 +118,7 @@
                 <a href="portfolio.html">DÉCOUVRIR NOTRE PORTFOLIO</a>
             </div>
             <div class="image">
-                <img src="../img/img2.svg" alt="icone flottante">
+                <img src="img/img2.svg" alt="icone flottante">
             </div>
         </section>
         <section>
@@ -112,17 +129,17 @@
                 <a href="contact.html">NOUS CONTACTER</a>
             </div>
             <div class="image">
-                <img src="../img/img3.svg" alt="icone flottante">
+                <img src="img/img3.svg" alt="icone flottante">
             </div>
         </section>
     </main>
     <!-- Footer -->
     <footer>
         <nav>
-            <a href="https://www.facebook.com/" target="_blank"><img src="../img/fb.svg" alt=""></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="../img/insta.svg" alt=""></a>
-            <a href="https://twitter.com/" target="_blank"><img src="../img/twitter.svg" alt=""></a>
-            <a href="https://fr.linkedin.com/" target="_blank"><img src="../img/linkedin.svg" alt=""></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="img/fb.svg" alt=""></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.svg" alt=""></a>
+            <a href="https://twitter.com/" target="_blank"><img src="img/twitter.svg" alt=""></a>
+            <a href="https://fr.linkedin.com/" target="_blank"><img src="img/linkedin.svg" alt=""></a>
         </nav>
         <p>© 2023. Dev&Co. Tous droits réservés.</p>
     </footer>

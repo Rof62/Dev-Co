@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- JS -->
     <script src="../js/gestionProfil.js" defer></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/d15ae6a2f3.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +21,15 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar">
-            <a href="index.html" class="logo">Dev<span>&</span>Co</a>
+            <a href="../index.html" class="logo">Dev<span>&</span>Co</a>
             <div class="menu">
                 <p>Menu</p>
             </div>
             <button class="connexion">Connexion/Inscription</button>
             <div class="blocIcones">
                 <button class="gestion"><a href="../html/gestionProfil.html"><img src="../img/connexion.svg" alt=""></a></button>
-                <button><img src="../img/panier.svg" alt=""></button> 
+                <button class="panier"><img src="../img/panier.svg" alt=""></button> 
+
             </div>
             <ul> 
                 <li><a href="prestations.html">Prestations</a></li>
@@ -80,8 +82,77 @@
             </div>
         </div>
     </div>
+     <!-- Modal Panier -->
+    <div class="panierAchat">
+        <i class="fa-solid fa-xmark closePanier"></i>
+        <p class="logo">Dev<span>&</span>Co</p>
+        <h2>Votre panier</h2>
+        <input type="text" placeholder="Vous avez un code promo ?">
+        <div class="detail">
+            <div class="categories">
+                <p>Formation</p>
+                <p>Prix</p>
+            </div>
+            <div class="articles">
+            </div>
+        </div>
+        <button>Commander</button>
+        <button>Continuer vos achats</button>
+    </div>
     <!-- Main -->
-    <main class="gestionProfil">
+    <main class="gestionProfil center">
+        <div class="lien">
+        <li><a href="">se deconnecter</a></li>
+        </div>
+        <div class="infos">
+            <h2>Mes informations</h2>
+        </div>
+        <div class="information">
+            <div class="nom">
+                <h4>Nom</h4>
+                <p></p>
+            </div>
+            <div class="prenom">
+                <h4>Prenom</h4>
+                <p></p>
+            </div>
+        </div>
+        <div class="ligne"></div>
+        
+        <div class="adresse">
+            <h5>Adresse</h5>
+            <p></p>
+            <button><iconify-icon class="icon" icon="streamline:interface-edit-pencil-change-edit-modify-pencil-write-writing"></iconify-icon>Modifier</button>  
+        </div>
+        <div class="mail">
+            <h5>Adresse mail</h5>
+            <p></p>
+            <button><iconify-icon class="icon" icon="streamline:interface-edit-pencil-change-edit-modify-pencil-write-writing"></iconify-icon>Modifier</button> 
+        </div>
+        <div class="tel">
+            <h5>Numèro de tel</h5>
+            <p></p>
+            <button><iconify-icon class="icon" icon="streamline:interface-edit-pencil-change-edit-modify-pencil-write-writing"></iconify-icon>Modifier</button>
+        </div>
+    
+        <div class="profil">
+            <h2>Mon profil</h2>
+        </div>
+        
+        <div class="utilisateur">
+            <h5>Nom d'utilisateur</h5>
+            <p></p>
+            <button><iconify-icon class="icon" icon="streamline:interface-edit-pencil-change-edit-modify-pencil-write-writing"></iconify-icon>Modifier</button>
+        </div>
+        <div class="motDePasse">
+            <h5>Mot de passe</h5>
+            <p></p>
+            <button><iconify-icon class="icon" icon="streamline:interface-edit-pencil-change-edit-modify-pencil-write-writing"></iconify-icon>Modifier</button>  
+        </div>
+       
+    
+        <h5 class="historique">Mon historique de commande</h5>
+        <img src="../img/gestion de profile.svg" alt="">
 
     </main>
     <!-- Footer -->

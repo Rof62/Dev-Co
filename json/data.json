@@ -20,6 +20,9 @@
         },
         {
             "texte7" : " Nous vous guidons tout au long du processus, de la création de vos NFT à leur mise en vente sur des plateformes spécialisées. Nous vous aidons également à comprendre les aspects juridiques, les droits de propriété intellectuelle et les meilleures pratiques pour maximiser la visibilité et la valeur de vos NFT. Avec notre expertise technique et notre connaissance du marché, nous vous offrons une solution complète pour exploiter le potentiel illimité des NFT dans le domaine de l'art numérique."
+        },
+        {
+            "texte8" : "Dans la deuxième partie, nous explorerons le vaste monde de JavaScript, l'un des langages de programmation les plus populaires et polyvalents utilisés pour ajouter des fonctionnalités dynamiques et interactives aux sites web. Vous apprendrez à manipuler le DOM, à créer des animations, à gérer les événements et à interagir avec les API. Enfin, dans la dernière partie, nous nous aventurerons dans le domaine du Full Stack, où nous combinerons nos connaissances en HTML/CSS et JavaScript pour créer des applications web complètes. Vous apprendrez à gérer les bases de données, à construire des serveurs et à mettre en œuvre des applications fonctionnelles du côté client et du côté serveur. Que vous soyez débutant ou développeur en herbe, cette série de vidéos vous offrira une solide base pour exceller dans le développement web. Rejoignez-nous dès maintenant et devenez un expert du Full Stack en informatique !"
         }
     ]
 }

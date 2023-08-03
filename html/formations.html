@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <!-- JS -->
     <script src="../js/formations.js" defer></script>
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://kit.fontawesome.com/d15ae6a2f3.js" crossorigin="anonymous"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,14 +22,15 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar">
-            <a href="index.html" class="logo">Dev<span>&</span>Co</a>
+            <a href="../index.html" class="logo">Dev<span>&</span>Co</a>
             <div class="menu">
                 <p>Menu</p>
             </div>
             <button class="connexion">Connexion/Inscription</button>
             <div class="blocIcones">
                 <button class="gestion"><a href="../html/gestionProfil.html"><img src="../img/connexion.svg" alt=""></a></button>
-                <button><img src="../img/panier.svg" alt=""></button> 
+                <button class="panier"><img src="../img/panier.svg" alt=""></button> 
+
             </div>
             <ul> 
                 <li><a href="prestations.html">Prestations</a></li>
@@ -80,9 +83,198 @@
             </div>
         </div>
     </div>
+    <!-- Modal Panier -->
+    <div class="panierAchat">
+        <i class="fa-solid fa-xmark closePanier"></i>
+        <p class="logo">Dev<span>&</span>Co</p>
+        <h2>Votre panier</h2>
+        <input type="text" placeholder="Vous avez un code promo ?">
+        <div class="detail">
+            <div class="categories">
+                <p>Formation</p>
+                <p>Prix</p>
+            </div>
+            <div class="articles">
+            </div>
+        </div>
+        <button>Commander</button>
+        <button>Continuer vos achats</button>
+    </div>
     <!-- Main -->
-    <main class="formations">
-
+    <main class="formations center">
+        <section class="text">
+            <h2>Formations</h2>
+            <p class="ajoutText8">Découvrez notre série de vidéos de formation en informatique dédiée au développement web, conçue pour vous guider à travers les étapes essentielles de la programmation. Dans la première partie, nous plongerons dans l'univers du HTML et du CSS, les langages de base pour créer des sites web interactifs et esthétiquement attrayants.</p><span class="voirPlus8">...Voir plus</span>
+        </section>
+        <section class="cards">
+            <div class="cardsTop">
+                <div class="scene">
+                    <div class="card" id="cardHtml">
+                        <div class="card__face card__face--front styleRectoHtml">
+                            <h3>HTML/CSS</h3>
+                            <img src="../img/DevSiteWeb1.png" alt=""> 
+                            <p>Créez des sites modernes adaptés aux mobiles avec la dernière technologie flexbox !</p>
+                            <div class="logosHtml">
+                                <iconify-icon icon="vscode-icons:file-type-html"></iconify-icon>
+                                <iconify-icon icon="skill-icons:css"></iconify-icon>
+                            </div>
+                            <div class="return">
+                                <div class="arrow">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__face card__face--back styleVersoHtml">
+                            <h3>HTML/CSS</h3>
+                            <p>Ce que vous apprendrez :</p>
+                            <ul>
+                                <li>Comprendre la structure d'un site internet</li>
+                                <li>Créer des beaux sites internet</li>
+                                <li>Utiliser les dernières nouveautés en HTML5</li>
+                                <li>Utiliser les dernières nouveautés en CSS3</li>
+                                <li>Ajouter des images, des vidéos, de la musique, et gif</li>
+                                <li>Tout sur les apparences dynamiques</li>
+                                <li>Tout sur flexbox</li>
+                            </ul>
+                            <div class="price">
+                                <p id="priceTtc" >Prix : 16,99€<sup>TTC</sup> </p>
+                            </div>
+                            <button><a href="">Ajouter au panier</a></button>
+                            <div class="return">
+                                <div class="arrowBack">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene">
+                    <div class="card" id="cardJava">
+                        <div class="card__face card__face--front styleRectoJava">
+                            <h3>JAVASCRIPT</h3>
+                            <img src="../img/DevSiteWeb1.png" alt=""> 
+                            <p>Maîtrisez Javascript grâce au cours le plus complet sur internet ! Projets, exercices, quiz, ES8 et bien d’autres !</p>
+                            <div class="logosJava">
+                                <iconify-icon icon="skill-icons:javascript"></iconify-icon>
+                            </div>
+                            <div class="return">
+                                <div class="arrow2">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__face card__face--back styleVersoJava">
+                            <h3>JAVASCRIPT</h3>
+                            <p>Ce que vous apprendrez :</p>
+                            <ul>
+                                <li>Devenir un développeur JavaScript avancé, confiant et moderne à partir de zéro</li>
+                                <li>Devenir prêt pour l'emploi en comprenant vraiment comment JavaScript fonctionne en coulisses</li>
+                                <li>Fondamentaux de JavaScript : variables, if/else, opérateurs, logique booléenne, fonctions, tableaux, objets, boucles, chaînes de caractères, etc...</li>
+                            </ul>
+                            <div class="price">
+                                <p id="priceTtc" >Prix : 19,99€<sup>TTC</sup></p>
+                            </div>
+                            <button><a href="">Ajouter au panier</a></button>
+                            <div class="return">
+                                <div class="arrowBack2">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cardsBottom">
+                <div class="scene">
+                    <div class="card" id="cardFront">
+                        <div class="card__face card__face--front styleRectoFront">
+                            <h3>PACK FRONT</h3>
+                            <img src="../img/DevSiteWeb1.png" alt=""> 
+                            <p> Apprenez HTML, CSS, Javascript, jQuery...</p>
+                            <div class="logosFront">
+                                <iconify-icon icon="vscode-icons:file-type-html"></iconify-icon>
+                                <iconify-icon icon="skill-icons:css"></iconify-icon>
+                                <iconify-icon icon="skill-icons:javascript"></iconify-icon>
+                            </div>
+                            <div class="return">
+                                <div class="arrow3">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__face card__face--back styleVersoFront">
+                            <h3>PACK FRONT</h3>
+                            <p>Ce que vous apprendrez :</p>
+                            <ul>
+                                <li>Apprendre le développement web</li>
+                                <li>Apprendre l'HTML</li>
+                                <li>Apprendre le CSS</li>
+                                <li>Apprendre JavaScript</li>
+                                <li>Le "responsive"</li>
+                                <li>Flexbox / CSS Grid</li>
+                                <li>Utiliser un framework CSS</li>
+                                <li>Gérer l'accessibilité</li>
+                                <li>Utiliser un framework JS</li>
+                                <li>Créer des sites et applications Web</li>
+                            </ul>
+                            <div class="price">
+                                <p id="priceTtc" >Prix : 25,99€<sup>TTC</sup></p>
+                            </div>
+                            <button><a href="">Ajouter au panier</a></button>
+                            <div class="return">
+                                <div class="arrowBack3">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene">
+                    <div class="card" id="cardFull">
+                        <div class="card__face card__face--front styleRectoFull">
+                            <h3>PACK FULLSTACK</h3>
+                            <img src="../img/DevSiteWeb1.png" alt=""> 
+                            <p>Le Développement Web de A à Z. Apprenez HTML, CSS, Javascript, jQuery, Bootstrap, PHP, MySQL, Wordpress...</p>
+                            <div class="logosFull">
+                                <iconify-icon icon="vscode-icons:file-type-html"></iconify-icon>
+                                <iconify-icon icon="skill-icons:css"></iconify-icon>
+                                <iconify-icon icon="skill-icons:javascript"></iconify-icon>
+                                <iconify-icon icon="vscode-icons:file-type-php2"></iconify-icon>
+                                <iconify-icon icon="devicon:mysql-wordmark"></iconify-icon>
+                                <iconify-icon class="wordPress" icon="dashicons:wordpress"></iconify-icon>
+                            </div>
+                            <div class="return">
+                                <div class="arrow4">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card__face card__face--back styleVersoFull">
+                            <h3>PACK FULLSTACK</h3>
+                            <ul>
+                                <li>+65000 étudiants, le cours le plus populaire sur le marché francophone</li>
+                                <li>11 Quiz pour tester vos connaissances</li>
+                                <li>Votre Site Web perso avec Portfolio</li>
+                                <li>7 projets concrets de A à Z</li>
+                                <li>Conseils de Coach pour votre futur de Développeur Web</li>
+                                <li>Gagner de l’argent grâce à vos compétences de Développeur Web</li>
+                                <li>Tout sur les apparences dynamiques</li>
+                                <li>Créer des sites et applications Web</li>
+                            </ul>
+                            <div class="price">
+                                <p id="priceTtc" >Prix : 29,99€<sup>TTC</sup></p>
+                            </div>
+                            <button><a href="">Ajouter au panier</a></button>
+                            <div class="return">
+                                <div class="arrowBack4">
+                                    <iconify-icon class="arrowReturn" icon="game-icons:lob-arrow"></iconify-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
     <footer>

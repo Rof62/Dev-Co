@@ -60,4 +60,19 @@ connexionNav.addEventListener("click", () => {
         if(flipCard.style.visibility === "visible" && e.target !== flipCardFront && e.target !==connexionNav && e.target !== connexionResponsive ){
             flipCard.style.visibility="hidden"
             flipCard.style.transform="translate(-50%,-50%) scale(0)"    
-       }})
+  }})
+
+//  MODAL PANIER ACHAT
+const panierBtn = document.querySelector(".panier")
+const modalPanier = document.querySelector(".panierAchat")
+const closePanierBtn = document.querySelector(".closePanier")
+panierBtn.addEventListener("click", () =>{
+  modalPanier.style.visibility="visible"
+})
+
+closePanierBtn.addEventListener("click",() => {
+  modalPanier.style.visibility="hidden"
+})
+
+
+

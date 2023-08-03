@@ -9,6 +9,13 @@ menu.addEventListener('click', (e) => {
 })
 
 
+
+
+
+
+
+
+
 // PAGE CONTACT - VOLETS ROULANTS
 firstQuestion.addEventListener("click",() => {
     if(firstParagrapheVolet.style.display !== "block"){
@@ -93,3 +100,15 @@ connexionNav.addEventListener("click", () => {
             flipCard.style.visibility="hidden"
             flipCard.style.transform="translate(-50%,-50%) scale(0)"    
        }})
+
+       //  MODAL PANIER ACHAT
+const panierBtn = document.querySelector(".panier")
+const modalPanier = document.querySelector(".panierAchat")
+const closePanierBtn = document.querySelector(".closePanier")
+panierBtn.addEventListener("click", () =>{
+  modalPanier.style.visibility="visible"
+})
+
+closePanierBtn.addEventListener("click",() => {
+  modalPanier.style.visibility="hidden"
+})

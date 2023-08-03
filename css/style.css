@@ -1,3 +1,8 @@
+.price {
+  color: white;
+  font-size: 2rem;
+}
+
 :root {
   --firstColor: #000000;
   --secondColor: #fff;
@@ -256,7 +261,8 @@ header .active ul {
   cursor: pointer;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -322,6 +328,106 @@ header .active ul {
 .flip-card-back .connexionBtn {
   background-color: var(--thirdColor);
   color: var(--secondColor);
+}
+
+.panierAchat {
+  width: 25rem;
+  height: 32rem;
+  border: 3px solid var(--thirdColor);
+  border-radius: 1rem;
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  background-color: var(--firstColor);
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  padding: 2rem 0rem;
+  align-items: center;
+  flex-direction: column;
+  visibility: hidden;
+}
+.panierAchat i {
+  color: var(--secondColor);
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.panierAchat i :hover {
+  color: var(--thirdColor);
+}
+.panierAchat .logo {
+  color: var(--secondColor);
+  font-family: aladin, sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.panierAchat .logo span {
+  color: var(--thirdColor);
+}
+.panierAchat h2 {
+  color: var(--secondColor);
+  font-size: 1.5rem;
+}
+.panierAchat input {
+  background-color: var(--firstColor);
+  color: var(--secondColor);
+  border: 3px solid var(--thirdColor);
+  padding: 0.5rem 1rem;
+  width: 80%;
+  border-radius: 1rem;
+  outline: 0;
+}
+.panierAchat .detail {
+  border: 3px solid var(--thirdColor);
+  width: 80%;
+  height: 10rem;
+  border-radius: 1rem;
+}
+.panierAchat .detail .categories {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 100%;
+}
+.panierAchat .detail .categories p {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid var(--thirdColor);
+  width: 50%;
+  color: var(--secondColor);
+}
+.panierAchat .detail .articles {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.panierAchat .detail .articles p {
+  color: var(--secondColor);
+}
+.panierAchat button {
+  width: 80%;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  cursor: pointer;
+  border: 0;
+  font-family: roboto, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: transform 0.5s;
+}
+.panierAchat button:hover {
+  transform: scale(1.1);
+}
+.panierAchat button:last-child {
+  background-color: var(--firstColor);
+  border: 3px solid var(--secondColor);
 }
 
 main.index section {
@@ -569,7 +675,8 @@ main.portfolio section .textAndCarousel .text {
   align-items: center;
   overflow: hidden;
 }
-main.portfolio section .textAndCarousel .text h2, main.portfolio section .textAndCarousel .text p {
+main.portfolio section .textAndCarousel .text h2,
+main.portfolio section .textAndCarousel .text p {
   color: var(--secondColor);
 }
 main.portfolio section .textAndCarousel .text h2 {
@@ -728,6 +835,506 @@ main.portfolio .video1 video {
   transform: scale(1.1);
 }
 
+main.formations {
+  margin-top: 5%;
+  text-align: center;
+}
+main.formations .voirPlus8 {
+  display: none;
+  color: #2c8ec7;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+main.formations .text {
+  margin-top: 15%;
+}
+main.formations .text h2 {
+  text-align: center;
+  color: var(--secondColor);
+  width: 100%;
+  margin-top: 5%;
+  font-size: 2rem;
+}
+main.formations .text p {
+  color: var(--secondColor);
+  margin: 2% 0 4% 0;
+}
+main.formations .cards {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main.formations .cards h3 {
+  color: var(--secondColor);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+main.formations .cards img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+main.formations .cards p {
+  color: var(--secondColor);
+}
+main.formations .cards ul {
+  margin-left: 10%;
+}
+main.formations .cards li {
+  font-size: 1rem;
+  color: var(--secondColor);
+  -webkit-text-decoration: double;
+          text-decoration: double;
+  list-style-type: circle;
+  margin-bottom: 2%;
+  padding-right: 10%;
+  text-align: start;
+}
+main.formations .cards .return {
+  display: flex;
+  justify-content: end;
+  height: 3rem;
+  align-items: center;
+}
+main.formations .cards .return .arrow, main.formations .cards .return .arrow2, main.formations .cards .return .arrow3, main.formations .cards .return .arrow4, main.formations .cards .return .arrowBack, main.formations .cards .return .arrowBack2, main.formations .cards .return .arrowBack3, main.formations .cards .return .arrowBack4 {
+  width: 15%;
+  height: 100%;
+  cursor: pointer;
+  background-color: var(--thirdColor);
+  border-radius: 1.5rem 0 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.formations .cards .return .arrow .arrowReturn, main.formations .cards .return .arrow2 .arrowReturn, main.formations .cards .return .arrow3 .arrowReturn, main.formations .cards .return .arrow4 .arrowReturn, main.formations .cards .return .arrowBack .arrowReturn, main.formations .cards .return .arrowBack2 .arrowReturn, main.formations .cards .return .arrowBack3 .arrowReturn, main.formations .cards .return .arrowBack4 .arrowReturn {
+  transform: rotate(-30deg);
+  font-size: 1.5rem;
+  color: var(--secondColor);
+}
+main.formations .cards .price #priceTtc {
+  text-align: center;
+}
+main.formations .cards .price sup {
+  font-size: 0.6rem;
+}
+main.formations .cards button {
+  background-color: var(--thirdColor);
+  display: block;
+  margin: 0 auto;
+  border-radius: 4vh;
+  border: 0;
+  padding: 1.5% 2.5%;
+}
+main.formations .cards button a {
+  color: var(--secondColor);
+  font-size: 1rem;
+  padding: 0.3rem 0;
+}
+main.formations .cards .cardsTop {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+main.formations .cards .cardsTop .styleRectoHtml p {
+  width: 70%;
+  margin: 0 auto;
+}
+main.formations .cards .cardsTop .styleRectoHtml .logosHtml {
+  font-size: 2.5rem;
+  text-align: center;
+}
+main.formations .cards .cardsTop .styleVersoHtml p {
+  text-align: start;
+  padding-left: 1rem;
+}
+main.formations .cards .cardsTop .styleRectoJava p {
+  width: 70%;
+  margin: 0 auto;
+}
+main.formations .cards .cardsTop .styleRectoJava .logosJava {
+  font-size: 2.5rem;
+  text-align: center;
+}
+main.formations .cards .cardsTop .styleVersoJava p {
+  text-align: start;
+  padding-left: 1rem;
+}
+main.formations .cards .cardsBottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+main.formations .cards .cardsBottom .styleRectoFront p {
+  width: 70%;
+  margin: 2rem auto 0;
+}
+main.formations .cards .cardsBottom .styleRectoFront .logosFront {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 10%;
+}
+main.formations .cards .cardsBottom .styleVersoFront p {
+  text-align: start;
+  padding-left: 1rem;
+}
+main.formations .cards .cardsBottom .styleRectoFull p {
+  width: 70%;
+  margin: 0 auto;
+}
+main.formations .cards .cardsBottom .styleRectoFull .logosFull {
+  font-size: 2.5rem;
+  text-align: center;
+}
+main.formations .cards .cardsBottom .styleRectoFull .logosFull .wordPress {
+  color: var(--thirdColor);
+}
+main.formations .cards .cardsBottom .styleVersoFull p {
+  text-align: start;
+  margin: 15% 0 8% 4%;
+}
+main.formations .cards .cardsBottom .styleVersoFull ul {
+  margin-top: 15%;
+}
+main.formations .scene {
+  width: 25rem;
+  height: 38rem;
+  perspective: 600px;
+}
+main.formations .card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+main.formations .card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+main.formations .card__face--front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--firstColor);
+  border-radius: 1.5rem;
+  border: 2px solid var(--thirdColor);
+  padding-top: 1rem;
+}
+main.formations .card__face--back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--firstColor);
+  transform: rotateY(180deg);
+  border-radius: 1.5rem;
+  border: 2px solid var(--thirdColor);
+  padding-top: 2rem;
+}
+main.formations .card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+main.gestionProfil .lien li {
+  display: flex;
+  justify-content: end;
+  margin-top: 10%;
+}
+main.gestionProfil .lien li a {
+  color: var(--thirdColor);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  transition: 0.5s;
+}
+main.gestionProfil .lien li a:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .infos h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+main.gestionProfil .information {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  width: 100%;
+}
+main.gestionProfil .information div {
+  width: 40%;
+}
+main.gestionProfil .information P {
+  width: 100%;
+  height: 2.2em;
+  border: 1px solid var(--thirdColor);
+  margin: 30px;
+  border-radius: 0.8em;
+  display: flex;
+  justify-content: center;
+}
+main.gestionProfil .information h4 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+main.gestionProfil .ligne {
+  width: 80%;
+  border: 1px solid var(--thirdColor);
+  margin: 5% auto;
+}
+main.gestionProfil .alignement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+main.gestionProfil .adresse {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+main.gestionProfil .adresse h5 {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1rem 5px;
+}
+main.gestionProfil .adresse p {
+  width: 50%;
+  height: 1.7em;
+  border: 1px solid var(--thirdColor);
+  border-radius: 0.8em;
+  margin: 1rem 5px;
+}
+main.gestionProfil .adresse button {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  width: 15%;
+  height: 1.7em;
+  border-radius: 0.8em;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 5px;
+  border: 0;
+  transition: 0.5s;
+}
+main.gestionProfil .adresse button:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .adresse button .icon {
+  margin-right: 15%;
+  align-items: center;
+}
+main.gestionProfil .mail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+main.gestionProfil .mail h5 {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1rem 5px;
+}
+main.gestionProfil .mail p {
+  width: 50%;
+  height: 1.7em;
+  border: 1px solid var(--thirdColor);
+  border-radius: 0.8em;
+  margin: 1rem 5px;
+}
+main.gestionProfil .mail button {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  width: 15%;
+  height: 1.7em;
+  border-radius: 0.8em;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 5px;
+  border: 0;
+  transition: 0.5s;
+}
+main.gestionProfil .mail button:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .mail button .icon {
+  margin-right: 15%;
+  align-items: center;
+}
+main.gestionProfil .tel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+main.gestionProfil .tel h5 {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1rem 5px;
+}
+main.gestionProfil .tel p {
+  width: 50%;
+  height: 1.7em;
+  border: 1px solid var(--thirdColor);
+  border-radius: 0.8em;
+  margin: 1rem 5px;
+}
+main.gestionProfil .tel button {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  width: 15%;
+  height: 1.7em;
+  border-radius: 0.8em;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 5px;
+  border: 0;
+  transition: 0.5s;
+}
+main.gestionProfil .tel button:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .tel button .icon {
+  margin-right: 15%;
+  align-items: center;
+}
+main.gestionProfil .utilisateur {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+main.gestionProfil .utilisateur h5 {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1rem 5px;
+}
+main.gestionProfil .utilisateur p {
+  width: 50%;
+  height: 1.7em;
+  border: 1px solid var(--thirdColor);
+  border-radius: 0.8em;
+  margin: 1rem 5px;
+}
+main.gestionProfil .utilisateur button {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  width: 15%;
+  height: 1.7em;
+  border-radius: 0.8em;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 5px;
+  border: 0;
+  transition: 0.5s;
+}
+main.gestionProfil .utilisateur button:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .utilisateur button .icon {
+  margin-right: 15%;
+  align-items: center;
+}
+main.gestionProfil .motDePasse {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+main.gestionProfil .motDePasse h5 {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  text-align: center;
+  margin: 1rem 5px;
+}
+main.gestionProfil .motDePasse p {
+  width: 50%;
+  height: 1.7em;
+  border: 1px solid var(--thirdColor);
+  border-radius: 0.8em;
+  margin: 1rem 5px;
+}
+main.gestionProfil .motDePasse button {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  width: 15%;
+  height: 1.7em;
+  border-radius: 0.8em;
+  font-size: 18px;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 5px;
+  border: 0;
+  transition: 0.5s;
+}
+main.gestionProfil .motDePasse button:hover {
+  transform: scale(1.2);
+}
+main.gestionProfil .motDePasse button .icon {
+  margin-right: 15%;
+  align-items: center;
+}
+main.gestionProfil .profil h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+main.gestionProfil .historique {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: 25px;
+}
+main.gestionProfil p {
+  color: var(--secondColor);
+}
+main.gestionProfil h2, main.gestionProfil h4, main.gestionProfil h5 {
+  color: var(--secondColor);
+}
+main.gestionProfil img {
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 20%;
+}
+
 main.contact {
   margin-top: 30vh;
 }
@@ -735,14 +1342,18 @@ main.contact .infosContact {
   display: flex;
   justify-content: space-around;
 }
-main.contact .infosContact .adress, main.contact .infosContact .phone, main.contact .infosContact .mail {
+main.contact .infosContact .adress,
+main.contact .infosContact .phone,
+main.contact .infosContact .mail {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   width: 10rem;
 }
-main.contact .infosContact .adress .icone, main.contact .infosContact .phone .icone, main.contact .infosContact .mail .icone {
+main.contact .infosContact .adress .icone,
+main.contact .infosContact .phone .icone,
+main.contact .infosContact .mail .icone {
   background-color: var(--thirdColor);
   border-radius: 50%;
   display: flex;
@@ -751,13 +1362,17 @@ main.contact .infosContact .adress .icone, main.contact .infosContact .phone .ic
   width: 5rem;
   height: 5rem;
 }
-main.contact .infosContact .adress h4, main.contact .infosContact .phone h4, main.contact .infosContact .mail h4 {
+main.contact .infosContact .adress h4,
+main.contact .infosContact .phone h4,
+main.contact .infosContact .mail h4 {
   color: var(--thirdColor);
   width: -moz-max-content;
   width: max-content;
   margin: 0.8rem auto 0;
 }
-main.contact .infosContact .adress p, main.contact .infosContact .phone p, main.contact .infosContact .mail p {
+main.contact .infosContact .adress p,
+main.contact .infosContact .phone p,
+main.contact .infosContact .mail p {
   color: var(--secondColor);
   width: -moz-max-content;
   width: max-content;
@@ -777,7 +1392,8 @@ main.contact form {
   margin: 0 auto;
   width: 70%;
 }
-main.contact form input, main.contact form textarea {
+main.contact form input,
+main.contact form textarea {
   border: 2px solid var(--thirdColor);
   background-color: var(--firstColor);
   border-radius: 0.5rem;
@@ -969,7 +1585,7 @@ footer nav a:hover {
   }
   .flip-card {
     width: 25rem;
-    top: 40%;
+    top: 50%;
     z-index: 20;
   }
   .flip-card input::-moz-placeholder {
@@ -1157,6 +1773,64 @@ footer nav a:hover {
   }
   main.portfolio section a {
     font-size: 0.8rem;
+  }
+  main.formations .voirPlus8 {
+    display: block;
+    color: var(--thirdColor);
+    font-size: 0.8rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+  main.gestionProfil .information {
+    flex-direction: column;
+  }
+  main.gestionProfil .information .nom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  main.gestionProfil .information .nom h4 {
+    width: 30%;
+    font-size: 14px;
+  }
+  main.gestionProfil .information .nom p {
+    width: 50%;
+  }
+  main.gestionProfil .information .prenom {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  main.gestionProfil .information .prenom h4 {
+    width: 30%;
+    font-size: 14px;
+  }
+  main.gestionProfil .information .prenom p {
+    width: 50%;
+  }
+  main.gestionProfil .adresse, main.gestionProfil .mail, main.gestionProfil .tel, main.gestionProfil .utilisateur, main.gestionProfil .motDePasse {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  main.gestionProfil .adresse h5, main.gestionProfil .mail h5, main.gestionProfil .tel h5, main.gestionProfil .utilisateur h5, main.gestionProfil .motDePasse h5 {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  main.gestionProfil .adresse p, main.gestionProfil .mail p, main.gestionProfil .tel p, main.gestionProfil .utilisateur p, main.gestionProfil .motDePasse p {
+    width: 80%;
+  }
+  main.gestionProfil .adresse button, main.gestionProfil .mail button, main.gestionProfil .tel button, main.gestionProfil .utilisateur button, main.gestionProfil .motDePasse button {
+    width: 40%;
+    font-size: 14px;
+    max-width: 10rem;
+  }
+  main.gestionProfil .profil h2 {
+    margin-bottom: 5%;
+  }
+  main.gestionProfil .historique {
+    font-size: 18px;
   }
   main.contact {
     margin-top: 20vh;

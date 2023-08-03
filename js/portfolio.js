@@ -62,6 +62,19 @@ connexionNav.addEventListener("click", () => {
             flipCard.style.transform="translate(-50%,-50%) scale(0)"    
        }})
 
+//  MODAL PANIER ACHAT
+const panierBtn = document.querySelector(".panier")
+const modalPanier = document.querySelector(".panierAchat")
+const closePanierBtn = document.querySelector(".closePanier")
+panierBtn.addEventListener("click", () =>{
+  modalPanier.style.visibility="visible"
+})
+
+closePanierBtn.addEventListener("click",() => {
+  modalPanier.style.visibility="hidden"
+})
+
+
 
 // AJOUT/SUPPRESSION DE TEXTE IMPORTÉ DU FICHIER JSON VIA FETCH AVEC LE BOUTON VOIR PLUS/VOIR MOINS
 
