@@ -140,7 +140,7 @@ arrowBack4.addEventListener("click",()=>{
     const ajoutText8 = document.querySelector(".ajoutText8")
 
     const span8 = document.createElement("span")
-    span8.style.display="none"
+    
 
     ajoutText8.append(span8)
 
