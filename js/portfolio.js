@@ -206,7 +206,7 @@ divTechnologies3.addEventListener("click", () =>{
 const tailleEcran = () => {
     const largeurEcran = window.innerWidth
 
-    if(largeurEcran > 850){
+    if(largeurEcran > 940){
         window.addEventListener("resize", () => {
             span4.style.display = "inline"
             span5.style.display = "inline"

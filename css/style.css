@@ -897,7 +897,14 @@ main.formations .cards .return {
   height: 3rem;
   align-items: center;
 }
-main.formations .cards .return .arrow, main.formations .cards .return .arrow2, main.formations .cards .return .arrow3, main.formations .cards .return .arrow4, main.formations .cards .return .arrowBack, main.formations .cards .return .arrowBack2, main.formations .cards .return .arrowBack3, main.formations .cards .return .arrowBack4 {
+main.formations .cards .return .arrow,
+main.formations .cards .return .arrow2,
+main.formations .cards .return .arrow3,
+main.formations .cards .return .arrow4,
+main.formations .cards .return .arrowBack,
+main.formations .cards .return .arrowBack2,
+main.formations .cards .return .arrowBack3,
+main.formations .cards .return .arrowBack4 {
   width: 15%;
   height: 100%;
   cursor: pointer;
@@ -907,7 +914,14 @@ main.formations .cards .return .arrow, main.formations .cards .return .arrow2, m
   justify-content: center;
   align-items: center;
 }
-main.formations .cards .return .arrow .arrowReturn, main.formations .cards .return .arrow2 .arrowReturn, main.formations .cards .return .arrow3 .arrowReturn, main.formations .cards .return .arrow4 .arrowReturn, main.formations .cards .return .arrowBack .arrowReturn, main.formations .cards .return .arrowBack2 .arrowReturn, main.formations .cards .return .arrowBack3 .arrowReturn, main.formations .cards .return .arrowBack4 .arrowReturn {
+main.formations .cards .return .arrow .arrowReturn,
+main.formations .cards .return .arrow2 .arrowReturn,
+main.formations .cards .return .arrow3 .arrowReturn,
+main.formations .cards .return .arrow4 .arrowReturn,
+main.formations .cards .return .arrowBack .arrowReturn,
+main.formations .cards .return .arrowBack2 .arrowReturn,
+main.formations .cards .return .arrowBack3 .arrowReturn,
+main.formations .cards .return .arrowBack4 .arrowReturn {
   transform: rotate(-30deg);
   font-size: 1.5rem;
   color: var(--secondColor);
@@ -1326,7 +1340,9 @@ main.gestionProfil .historique {
 main.gestionProfil p {
   color: var(--secondColor);
 }
-main.gestionProfil h2, main.gestionProfil h4, main.gestionProfil h5 {
+main.gestionProfil h2,
+main.gestionProfil h4,
+main.gestionProfil h5 {
   color: var(--secondColor);
 }
 main.gestionProfil img {
@@ -1557,7 +1573,7 @@ footer nav a:hover {
     transform: translateX(-40vw) rotate(-720deg);
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 940px) {
   html {
     font-size: 14px;
   }
@@ -1811,20 +1827,36 @@ footer nav a:hover {
   main.gestionProfil .information .prenom p {
     width: 50%;
   }
-  main.gestionProfil .adresse, main.gestionProfil .mail, main.gestionProfil .tel, main.gestionProfil .utilisateur, main.gestionProfil .motDePasse {
+  main.gestionProfil .adresse,
+  main.gestionProfil .mail,
+  main.gestionProfil .tel,
+  main.gestionProfil .utilisateur,
+  main.gestionProfil .motDePasse {
     flex-direction: column;
     text-align: center;
     justify-content: center;
     margin: 0 auto;
   }
-  main.gestionProfil .adresse h5, main.gestionProfil .mail h5, main.gestionProfil .tel h5, main.gestionProfil .utilisateur h5, main.gestionProfil .motDePasse h5 {
+  main.gestionProfil .adresse h5,
+  main.gestionProfil .mail h5,
+  main.gestionProfil .tel h5,
+  main.gestionProfil .utilisateur h5,
+  main.gestionProfil .motDePasse h5 {
     width: -moz-max-content;
     width: max-content;
   }
-  main.gestionProfil .adresse p, main.gestionProfil .mail p, main.gestionProfil .tel p, main.gestionProfil .utilisateur p, main.gestionProfil .motDePasse p {
+  main.gestionProfil .adresse p,
+  main.gestionProfil .mail p,
+  main.gestionProfil .tel p,
+  main.gestionProfil .utilisateur p,
+  main.gestionProfil .motDePasse p {
     width: 80%;
   }
-  main.gestionProfil .adresse button, main.gestionProfil .mail button, main.gestionProfil .tel button, main.gestionProfil .utilisateur button, main.gestionProfil .motDePasse button {
+  main.gestionProfil .adresse button,
+  main.gestionProfil .mail button,
+  main.gestionProfil .tel button,
+  main.gestionProfil .utilisateur button,
+  main.gestionProfil .motDePasse button {
     width: 40%;
     font-size: 14px;
     max-width: 10rem;
