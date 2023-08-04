@@ -2029,6 +2029,9 @@ footer {
     }
     // Media Queries Page Formations
     main.formations{
+        span{
+            display: none;
+        }
         .voirPlus8{
             display: block;
             color: var(--thirdColor);

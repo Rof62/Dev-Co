@@ -140,7 +140,6 @@ arrowBack4.addEventListener("click",()=>{
     const ajoutText8 = document.querySelector(".ajoutText8")
 
     const span8 = document.createElement("span")
-    span8.style.display="none"
 
     ajoutText8.append(span8)
 
@@ -163,7 +162,7 @@ arrowBack4.addEventListener("click",()=>{
     const tailleEcran = () => {
         const largeurEcran = window.innerWidth
     
-        if(largeurEcran > 940){
+        if(largeurEcran > 850){
             window.addEventListener("resize", () => {
                 span8.style.display = "inline"
     
