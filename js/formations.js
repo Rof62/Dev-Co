@@ -163,7 +163,7 @@ arrowBack4.addEventListener("click",()=>{
     const tailleEcran = () => {
         const largeurEcran = window.innerWidth
     
-        if(largeurEcran > 850){
+        if(largeurEcran > 940){
             window.addEventListener("resize", () => {
                 span8.style.display = "inline"
     
