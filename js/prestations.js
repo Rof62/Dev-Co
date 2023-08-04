@@ -88,7 +88,7 @@ const imgNft2 = document.querySelector(".NFT2");
 const largeurEcran = window.innerWidth
 
 window.addEventListener("scroll", () => {
-    if (largeurEcran < 940){
+    if (largeurEcran < 850){
         console.log(largeurEcran);
         return
     }else{
@@ -214,7 +214,7 @@ voirPlus7.addEventListener("click",() =>{
 const tailleEcran = () => {
     const largeurEcran = window.innerWidth
 
-    if(largeurEcran > 940){
+    if(largeurEcran > 850){
         window.addEventListener("resize", () => {
             span4.style.display = "inline"
             span5.style.display = "inline"
